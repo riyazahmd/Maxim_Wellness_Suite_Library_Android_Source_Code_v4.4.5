@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="32dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="32dp" />
+
+        <androidx.constraintlayout.widget.Group
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="bpSelectUserTextView, userSpinner, userSpinnerArrowView, orTextView, newUserEditText, newUserButton"
+            android:id="@+id/bptUserGroup"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="30dp"
+            android:text="@string/select_user"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/color_primary"
+            android:id="@+id/bpSelectUserTextView"/>
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/bpSelectUserTextView"
+            android:layout_marginTop="10dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:id="@+id/userSpinner"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@id/userSpinner"
+            app:layout_constraintEnd_toEndOf="@id/userSpinner"
+            app:layout_constraintBottom_toBottomOf="@id/userSpinner"
+            android:src="@drawable/ic_arrow_drop_down"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/userSpinnerArrowView"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/userSpinner"
+            android:layout_marginTop="10dp"
+            android:text="@string/or"
+            android:textSize="14sp"
+            android:id="@+id/orTextView"
+            android:gravity="center"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            app:layout_constraintEnd_toStartOf="@id/newUserButton"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/orTextView"
+            app:layout_constraintWidth_max="@dimen/menu_item_view_max_width"
+            android:layout_marginTop="10dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:id="@+id/newUserEditText"
+            android:hint="@string/create_a_new_user"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_person_add"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toEndOf="@id/newUserEditText"
+            app:layout_constraintTop_toTopOf="@id/newUserEditText"
+            app:layout_constraintBottom_toBottomOf="@id/newUserEditText"
+            android:layout_marginStart="5dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:id="@+id/newUserButton"
+            app:tint="@color/color_primary" />
+
+        <com.maximintegrated.maximsensorsapp.MenuItemView
+            android:id="@+id/measureBpMenuItemView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:cardElevation="@dimen/menu_item_card_elevation"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/newUserEditText"
+            app:layout_constraintWidth_max="@dimen/menu_item_view_max_width"
+            app:miv_icon="@drawable/ic_timeline"
+            app:miv_title="Measure BP" />
+
+        <com.maximintegrated.maximsensorsapp.MenuItemView
+            android:id="@+id/calibrationMenuItemView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/menu_item_margin_top"
+            app:cardElevation="@dimen/menu_item_card_elevation"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/measureBpMenuItemView"
+            app:layout_constraintWidth_max="@dimen/menu_item_view_max_width"
+            app:miv_icon="@drawable/ic_build"
+            app:miv_title="Calibration" />
+
+        <com.maximintegrated.maximsensorsapp.MenuItemView
+            android:id="@+id/bpHistoryMenuItemView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/menu_item_margin_top"
+            app:cardElevation="@dimen/menu_item_card_elevation"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/calibrationMenuItemView"
+            app:layout_constraintWidth_max="@dimen/menu_item_view_max_width"
+            app:miv_icon="@drawable/ic_history"
+            app:miv_title="@string/bp_history" />
+
+        <com.maximintegrated.maximsensorsapp.MenuItemView
+            android:id="@+id/bpTutorialMenuItemView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/menu_item_margin_top"
+            app:cardElevation="@dimen/menu_item_card_elevation"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/bpHistoryMenuItemView"
+            app:layout_constraintWidth_max="@dimen/menu_item_view_max_width"
+            app:miv_icon="@drawable/ic_help"
+            app:miv_title="@string/tutorial" />
+
+        <com.maximintegrated.maximsensorsapp.view.QardioView
+            android:id="@+id/qardioViewMainFragment"
+            style="@style/DefaultCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/menu_item_margin_top"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/bpTutorialMenuItemView" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/qardioViewMainFragment"
+            android:layout_marginTop="24dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</merge>

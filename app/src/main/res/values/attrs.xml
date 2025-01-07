@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MenuItemView">
+        <attr name="miv_title" format="reference|string" />
+        <attr name="miv_icon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="MeasurementResultView">
+        <attr name="mrv_title" format="string" />
+        <attr name="mrv_unit" format="string" />
+        <attr name="mrv_enable_animation" format="boolean" />
+        <attr name="mrv_animation_type" format="enum" >
+            <enum name="flash" value="0" />
+            <enum name="fade" value="1" />
+            <enum name="heart_beat" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ResultCardView">
+        <attr name="rcv_title" format="string" />
+        <attr name="rcv_unit" format="string" />
+        <attr name="rcv_value" format="float" />
+        <attr name="rcv_decimal_places" format="integer" />
+        <attr name="rcv_flashing_text" format="string" />
+        <attr name="rcv_enable_progress" format="boolean" />
+        <attr name="rcv_enable_scd_view" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="OfflineDataView">
+        <attr name="odv_title" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="MultiChannelChartView">
+        <attr name="mcv_single_selection" format="boolean" />
+        <attr name="mcv_show_settings" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CalibrationView">
+        <attr name="cv_title" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="OldProtocolCalibrationView">
+        <attr name="opcv_title" format="string"/>
+    </declare-styleable>
+</resources>

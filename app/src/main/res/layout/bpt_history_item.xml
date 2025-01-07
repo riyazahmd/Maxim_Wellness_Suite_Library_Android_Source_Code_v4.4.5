@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    app:cardElevation="@dimen/menu_item_card_elevation"
+    app:cardCornerRadius="5dp"
+    android:clipToPadding="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/ic_description"
+            android:tint="@color/color_primary"
+            android:id="@+id/historyImageView"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Calibration"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/historyImageView"
+            app:layout_constraintTop_toTopOf="@id/historyImageView"
+            android:layout_marginStart="10dp"
+            android:id="@+id/historyTypeTextView"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="2020-02-05-14:48:35"
+            app:layout_constraintStart_toEndOf="@id/historyImageView"
+            app:layout_constraintBottom_toBottomOf="@id/historyImageView"
+            android:layout_marginStart="10dp"
+            android:id="@+id/historyDateTextView"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="110 / 70"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:id="@+id/historySbpDbpTextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="10dp"
+            android:visibility="visible"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/historySbpDbpTextView"
+            app:layout_constraintTop_toBottomOf="@id/historySbpDbpTextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/historyHrSpo2TextView"
+            tools:text="@string/hr_spo2_format"
+            app:layout_constraintVertical_bias="1"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

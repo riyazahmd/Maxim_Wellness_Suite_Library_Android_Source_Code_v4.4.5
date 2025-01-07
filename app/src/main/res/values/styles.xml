@@ -1,0 +1,54 @@
+<resources>
+
+    <style name="Theme.MaximSensorsApp" parent="Theme.Maxim" />
+
+    <style name="TextAppearance.Maxim.PpgChannel" parent="TextAppearance.AppCompat.Caption" />
+
+    <style name="TextAppearance.Maxim.MeasuringTitleView" parent="TextAppearance.MaterialComponents.Headline6" />
+
+    <style name="TextAppearance.Maxim.MeasuringReadyToStartMessageView" parent="TextAppearance.MaterialComponents.Subtitle2" />
+
+    <style name="TextAppearance.Maxim.MeasuringMessage" parent="TextAppearance.MaterialComponents.Subtitle2" />
+
+    <style name="TextAppearance.Maxim.MeasuringWarningMessageView" parent="TextAppearance.MaterialComponents.Subtitle1" />
+
+    <style name="TextAppearance.Maxim.MeasuringTimeoutMessageView" parent="TextAppearance.MaterialComponents.Caption" />
+
+    <style name="TextAppearance.Maxim.MeasuringResultView" parent="TextAppearance.MaterialComponents.Headline4" />
+
+    <style name="TextAppearance.Maxim.MeasuringResultTextView" parent="TextAppearance.MaterialComponents.Headline6" />
+
+    <style name="TextAppearance.Maxim.ResultCard.Title" parent="TextAppearance.AppCompat.Subhead" />
+
+    <style name="TextAppearance.Maxim.ResultCard.Value" parent="TextAppearance.AppCompat.Large" />
+
+    <style name="TextAppearance.Maxim.MaterialButton" parent="TextAppearance.MaterialComponents.Subtitle2" />
+
+    <style name="TitleTextView">
+        <item name="android:textColor">@color/color_primary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CardViewTitleTextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/color_primary</item>
+        <item name="android:textColor">@color/color_on_primary</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="SectionCardView" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="cardCornerRadius">8dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:clipToPadding">true</item>
+    </style>
+
+    <style name="DefaultCardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardElevation">8dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/wakeChart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintHeight_min="80dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintEnd_toStartOf="@id/remChart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/remChart"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintBottom_toBottomOf="@id/wakeChart"
+            app:layout_constraintEnd_toStartOf="@id/lightChart"
+            app:layout_constraintStart_toEndOf="@+id/wakeChart"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/lightChart"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintBottom_toBottomOf="@id/wakeChart"
+            app:layout_constraintEnd_toStartOf="@id/deepChart"
+            app:layout_constraintStart_toEndOf="@+id/remChart"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/deepChart"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            app:layout_constraintBottom_toBottomOf="@id/wakeChart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lightChart"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/wakeInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="@id/wakeChart"
+            app:layout_constraintStart_toStartOf="@id/wakeChart"
+            app:layout_constraintTop_toBottomOf="@id/wakeChart"
+            tools:text="9h 59min"/>
+
+        <TextView
+            android:id="@+id/wakeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/circle_wake"
+            android:drawablePadding="10dp"
+            android:text="@string/wake"
+            app:layout_constraintEnd_toEndOf="@id/wakeChart"
+            app:layout_constraintStart_toStartOf="@id/wakeChart"
+            app:layout_constraintTop_toBottomOf="@id/wakeInfo"/>
+
+
+        <TextView
+            android:id="@+id/remInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="@id/remChart"
+            app:layout_constraintStart_toStartOf="@id/remChart"
+            app:layout_constraintTop_toBottomOf="@id/remChart"
+            tools:text="9h 59min"/>
+
+        <TextView
+            android:id="@+id/remText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/circle_rem"
+            android:drawablePadding="10dp"
+            android:text="@string/rem"
+            app:layout_constraintEnd_toEndOf="@id/remInfo"
+            app:layout_constraintStart_toStartOf="@id/remInfo"
+            app:layout_constraintTop_toBottomOf="@id/remInfo"/>
+
+
+        <TextView
+            android:id="@+id/lightInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="@id/lightChart"
+            app:layout_constraintStart_toStartOf="@id/lightChart"
+            app:layout_constraintTop_toBottomOf="@id/lightChart"
+            tools:text="9h 59min"/>
+
+        <TextView
+            android:id="@+id/lightText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/circle_light"
+            android:drawablePadding="10dp"
+            android:text="@string/light"
+            app:layout_constraintEnd_toEndOf="@id/lightInfo"
+            app:layout_constraintStart_toStartOf="@id/lightInfo"
+            app:layout_constraintTop_toBottomOf="@id/lightInfo"/>
+
+        <TextView
+            android:id="@+id/deepInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="@id/deepChart"
+            app:layout_constraintStart_toStartOf="@id/deepChart"
+            app:layout_constraintTop_toBottomOf="@id/deepChart"
+            tools:text="9h 59min"/>
+
+        <TextView
+            android:id="@+id/deepText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/circle_deep"
+            android:drawablePadding="10dp"
+            android:text="@string/deep"
+            app:layout_constraintEnd_toEndOf="@id/deepInfo"
+            app:layout_constraintStart_toStartOf="@id/deepInfo"
+            app:layout_constraintTop_toBottomOf="@id/deepInfo"/>
+
+        <View
+            android:id="@+id/horizontalLine"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:background="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/deepText"/>
+
+        <TextView
+            android:id="@+id/bedTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            tools:text="Bed Time"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalLine"/>
+
+        <TextView
+            android:id="@+id/wakeTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            tools:text="Wake Time"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bedTime"/>
+
+        <TextView
+            android:id="@+id/totalTime"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            tools:text="Total Time"
+            app:layout_constraintBottom_toBottomOf="@+id/bedTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bedTime"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/wakeTime"
+            app:layout_constraintVertical_bias="0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:id="@+id/labelText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/sleep_quality"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/sqiProgressBar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ProgressBar
+                    android:id="@+id/sqiProgressBar"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:progressDrawable="@drawable/gradient_pb"
+                    android:progress="0"
+                    android:max="100"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/labelText"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:id="@+id/sqiTextView"
+                    app:layout_constraintTop_toTopOf="@id/sqiProgressBar"
+                    app:layout_constraintBottom_toBottomOf="@id/sqiProgressBar"
+                    app:layout_constraintStart_toStartOf="@id/sqiProgressBar"
+                    app:layout_constraintEnd_toEndOf="@id/sqiProgressBar"
+                    tools:text="50 %"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:gravity="center"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</merge>

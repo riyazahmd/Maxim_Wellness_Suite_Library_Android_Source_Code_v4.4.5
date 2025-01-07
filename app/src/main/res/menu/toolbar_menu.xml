@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/readFromFileButton"
+        android:icon="@drawable/ic_description"
+        android:title="Read File"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/monitoring_start"
+        android:icon="@drawable/ic_start"
+        android:title="@string/monitoring_start"
+        app:showAsAction="always|withText" />
+
+    <item
+        android:id="@+id/monitoring_stop"
+        android:icon="@drawable/ic_stop"
+        android:title="@string/monitoring_stop"
+        android:visible="false"
+        app:showAsAction="always|withText" />
+
+    <item
+        android:id="@+id/log_to_file"
+        android:checkable="true"
+        android:checked="true"
+        android:enabled="false"
+        android:title="@string/log_to_file"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/log_to_flash"
+        android:checkable="true"
+        android:checked="false"
+        android:title="@string/log_to_flash"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/log_user_info"
+        android:checkable="true"
+        android:checked="false"
+        android:title="@string/log_user_info"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/enable_scd"
+        android:checkable="true"
+        android:checked="true"
+        android:title="@string/enable_scd"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/enable_mfio"
+        android:checkable="true"
+        android:checked="false"
+        android:title="@string/enable_mfio"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/enable_scdsm"
+        android:checkable="true"
+        android:checked="false"
+        android:title="@string/enable_scdsm"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/enable_low_power"
+        android:checkable="true"
+        android:checked="false"
+        android:title="@string/low_power_mode"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/hrm_settings"
+        android:checkable="false"
+        android:checked="false"
+        android:title="@string/settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/info_menu_item"
+        android:checkable="false"
+        android:checked="false"
+        android:title="@string/info"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/add_annotation"
+        android:checkable="false"
+        android:checked="false"
+        android:title="@string/add_annotation"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/send_arbitrary_command"
+        android:checkable="false"
+        android:checked="false"
+        android:title="@string/send_command"
+        app:showAsAction="never" />
+</menu>

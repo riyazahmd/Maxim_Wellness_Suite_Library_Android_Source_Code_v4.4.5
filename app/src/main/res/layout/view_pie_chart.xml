@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Date"
+            app:layout_constraintStart_toStartOf="@id/pieChart"
+            app:layout_constraintEnd_toEndOf="@id/pieChart"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"/>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChart"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dateText"/>
+
+        <TextView
+            android:id="@+id/sleepInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pieChart"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="SLEEP"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/wakeText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:drawableStart="@drawable/circle_wake"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pieChart"
+            app:layout_constraintTop_toTopOf="@id/pieChart"
+            app:layout_constraintBottom_toTopOf="@id/remText"
+            android:layout_marginStart="10dp"
+            tools:text="WAKE" />
+
+        <TextView
+            android:id="@+id/remText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:drawableStart="@drawable/circle_rem"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pieChart"
+            app:layout_constraintTop_toBottomOf="@+id/wakeText"
+            app:layout_constraintBottom_toTopOf="@id/lightText"
+            android:layout_marginStart="10dp"
+            tools:text="REM" />
+
+        <TextView
+            android:id="@+id/lightText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:drawableStart="@drawable/circle_light"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pieChart"
+            app:layout_constraintTop_toBottomOf="@+id/remText"
+            app:layout_constraintBottom_toTopOf="@id/deepText"
+            android:layout_marginStart="10dp"
+            tools:text="LIGHT" />
+
+        <TextView
+            android:id="@+id/deepText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:drawableStart="@drawable/circle_deep"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pieChart"
+            app:layout_constraintBottom_toBottomOf="@id/pieChart"
+            app:layout_constraintTop_toBottomOf="@+id/lightText"
+            android:layout_marginStart="10dp"
+            tools:text="DEEP"/>
+
+        <Button
+            android:id="@+id/detailsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/deepText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

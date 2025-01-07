@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/middleGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/statusImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            style="@style/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/calibration"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1."
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@id/sbpEditText1"
+            app:layout_constraintEnd_toStartOf="@id/sbpEditText1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/sbpEditText1"
+            android:id="@+id/numberTextView1"/>
+
+        <EditText
+            android:id="@+id/sbpEditText1"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:hint="@string/sbp"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:nextFocusForward="@id/dbpEditText1"
+            android:singleLine="true"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/dbpEditText1"
+            app:layout_constraintStart_toEndOf="@id/numberTextView1"
+            app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+        <EditText
+            android:id="@+id/dbpEditText1"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:hint="@string/dbp"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/sbpEditText1"
+            app:layout_constraintEnd_toStartOf="@id/confirmCheckBox1"
+            app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+        <TextView
+            android:id="@+id/availableTextView1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/wait"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/dbpEditText1"
+            android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:id="@+id/timerTextView1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="01:00"
+            android:textColor="@color/color_primary"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/availableTextView1"
+            android:layout_marginEnd="10dp" />
+
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@id/dbpEditText1"
+            app:layout_constraintBottom_toBottomOf="@id/dbpEditText1"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="10dp"
+            android:text="@string/confirm"
+            android:id="@+id/confirmCheckBox1"
+            android:enabled="false"/>
+
+        <TextView
+            style="@style/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2."
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@id/sbpEditText2"
+            app:layout_constraintEnd_toStartOf="@id/sbpEditText2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/sbpEditText2"
+            android:id="@+id/numberTextView2"/>
+
+        <EditText
+            android:id="@+id/sbpEditText2"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:hint="@string/sbp"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:nextFocusForward="@id/dbpEditText2"
+            android:singleLine="true"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/dbpEditText2"
+            app:layout_constraintStart_toEndOf="@id/numberTextView2"
+            app:layout_constraintTop_toBottomOf="@id/sbpEditText1"
+            android:enabled="false"/>
+
+        <EditText
+            android:id="@+id/dbpEditText2"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:hint="@string/dbp"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/sbpEditText2"
+            app:layout_constraintEnd_toStartOf="@id/confirmCheckBox2"
+            app:layout_constraintTop_toBottomOf="@id/dbpEditText1"
+            android:enabled="false"/>
+
+        <TextView
+            android:id="@+id/availableTextView2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/wait"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/dbpEditText2"
+            android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:id="@+id/timerTextView2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="01:00"
+            android:textColor="@color/color_primary"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/availableTextView2"
+            android:layout_marginEnd="10dp" />
+
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@id/dbpEditText2"
+            app:layout_constraintBottom_toBottomOf="@id/dbpEditText2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="10dp"
+            android:text="@string/confirm"
+            android:id="@+id/confirmCheckBox2"
+            android:enabled="false"/>
+
+        <TextView
+            style="@style/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3."
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@id/sbpEditText3"
+            app:layout_constraintEnd_toStartOf="@id/sbpEditText3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/sbpEditText3"
+            android:id="@+id/numberTextView3"/>
+
+        <EditText
+            android:id="@+id/sbpEditText3"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:hint="@string/sbp"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:nextFocusForward="@id/dbpEditText3"
+            android:singleLine="true"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/dbpEditText3"
+            app:layout_constraintStart_toEndOf="@id/numberTextView3"
+            app:layout_constraintTop_toBottomOf="@id/sbpEditText2"
+            android:enabled="false"/>
+
+        <EditText
+            android:id="@+id/dbpEditText3"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:hint="@string/dbp"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/sbpEditText3"
+            app:layout_constraintEnd_toStartOf="@id/confirmCheckBox3"
+            app:layout_constraintTop_toBottomOf="@id/dbpEditText2"
+            android:enabled="false"/>
+
+        <TextView
+            android:id="@+id/availableTextView3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/wait"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/dbpEditText3"
+            android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:id="@+id/timerTextView3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="01:00"
+            android:textColor="@color/color_primary"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/availableTextView3"
+            android:layout_marginEnd="10dp" />
+
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@id/dbpEditText3"
+            app:layout_constraintBottom_toBottomOf="@id/dbpEditText3"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="10dp"
+            android:text="@string/confirm"
+            android:id="@+id/confirmCheckBox3"
+            android:enabled="false"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/calibrationButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="40dp"
+            android:text="@string/start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/repeatButton"
+            app:layout_constraintTop_toBottomOf="@id/sbpEditText3" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/repeatButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/repeat"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/calibrationButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sbpEditText3" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/timerGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:constraint_referenced_ids="availableTextView1,timerTextView1" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/timerGroup2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:constraint_referenced_ids="availableTextView2,timerTextView2" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/timerGroup3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:constraint_referenced_ids="availableTextView3,timerTextView3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/colorBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            style="@style/DefaultCardView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/signal_chart_height"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.maximintegrated.maximsensorsapp.view.MultiChannelChartView
+                android:id="@+id/chart_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <com.maximintegrated.maximsensorsapp.ResultCardView
+            android:id="@+id/respirationResultView"
+            style="@style/DefaultCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardView"
+            app:layout_constraintWidth_max="300dp"
+            app:miv_icon="@drawable/ic_respiration"
+            app:rcv_enable_scd_view="true"
+            app:rcv_title="Respiration Rate\n(breath/min)" />
+
+        <com.maximintegrated.maximsensorsapp.view.ZephyrView
+            android:id="@+id/zephyrView"
+            style="@style/DefaultCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/respirationResultView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

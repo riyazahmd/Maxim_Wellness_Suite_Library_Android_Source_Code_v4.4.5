@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/card_padding">
+
+        <ImageView
+            android:id="@+id/logo_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/title_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/title_view"
+            app:srcCompat="@drawable/ic_respiration" />
+
+        <TextView
+            android:id="@+id/title_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/card_logo_title_spacing"
+            android:text="@string/rr_ref_device"
+            android:textAppearance="?textAppearanceHeadline6"
+            android:textColor="?android:textColorSecondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/logo_view"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/title_divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/card_title_divider_spacing"
+            android:background="?dividerVertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_view" />
+
+        <TextView
+            android:id="@+id/hr_title_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_title_content_spacing"
+            android:text="@string/rr_ref_heart_rate"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceSubtitle1"
+            app:layout_constraintEnd_toStartOf="@id/rr_title_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_view" />
+
+        <TextView
+            android:id="@+id/rr_title_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/rr_ref_respiration_rate"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceSubtitle1"
+            app:layout_constraintEnd_toStartOf="@id/rr_confidence_title_view"
+            app:layout_constraintStart_toEndOf="@id/hr_title_view"
+            app:layout_constraintTop_toTopOf="@id/hr_title_view" />
+
+        <TextView
+            android:id="@+id/rr_confidence_title_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/rr_ref_respiration_rate_confidence"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceSubtitle1"
+            app:layout_constraintEnd_toStartOf="@id/activity_title_view"
+            app:layout_constraintStart_toEndOf="@id/rr_title_view"
+            app:layout_constraintTop_toTopOf="@id/rr_title_view" />
+
+        <TextView
+            android:id="@+id/activity_title_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/rr_ref_activity"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceSubtitle1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/rr_confidence_title_view"
+            app:layout_constraintTop_toTopOf="@id/rr_confidence_title_view" />
+
+        <TextView
+            android:id="@+id/hr_value_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/empty_value"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.Maxim.Headline4.Custom"
+            app:layout_constraintEnd_toEndOf="@id/hr_title_view"
+            app:layout_constraintStart_toStartOf="@id/hr_title_view"
+            app:layout_constraintTop_toBottomOf="@id/hr_title_view"
+            tools:text="80" />
+
+        <TextView
+            android:id="@+id/rr_value_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/empty_value"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.Maxim.Headline4.Custom"
+            app:layout_constraintEnd_toEndOf="@id/rr_title_view"
+            app:layout_constraintStart_toStartOf="@id/rr_title_view"
+            app:layout_constraintTop_toBottomOf="@id/rr_title_view"
+            tools:text="16.1" />
+
+        <TextView
+            android:id="@+id/rr_conf_value_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/empty_value"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.Maxim.Headline4.Custom"
+            app:layout_constraintEnd_toEndOf="@id/rr_confidence_title_view"
+            app:layout_constraintStart_toStartOf="@id/rr_confidence_title_view"
+            app:layout_constraintTop_toBottomOf="@id/rr_confidence_title_view"
+            tools:text="100" />
+
+        <TextView
+            android:id="@+id/activity_value_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/empty_value"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.Maxim.Headline4.Custom"
+            app:layout_constraintEnd_toEndOf="@id/activity_title_view"
+            app:layout_constraintStart_toStartOf="@id/activity_title_view"
+            app:layout_constraintTop_toBottomOf="@id/activity_title_view"
+            tools:text="10.07" />
+
+        <TextView
+            android:id="@+id/hr_unit_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/rr_ref_heart_rate_unit"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceCaption"
+            app:layout_constraintEnd_toEndOf="@id/hr_value_view"
+            app:layout_constraintStart_toStartOf="@id/hr_value_view"
+            app:layout_constraintTop_toBottomOf="@id/hr_value_view" />
+
+        <TextView
+            android:id="@+id/rr_unit_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/rr_ref_respiration_rate_unit"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceCaption"
+            app:layout_constraintEnd_toEndOf="@id/rr_value_view"
+            app:layout_constraintStart_toStartOf="@id/rr_value_view"
+            app:layout_constraintTop_toBottomOf="@id/rr_value_view" />
+
+        <TextView
+            android:id="@+id/rr_conf_unit_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/rr_ref_respiration_rate_confidence_unit"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceCaption"
+            app:layout_constraintEnd_toEndOf="@id/rr_conf_value_view"
+            app:layout_constraintStart_toStartOf="@id/rr_conf_value_view"
+            app:layout_constraintTop_toBottomOf="@id/rr_conf_value_view" />
+
+        <TextView
+            android:id="@+id/activity_unit_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/rr_ref_activity_unit"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceCaption"
+            app:layout_constraintEnd_toEndOf="@id/activity_value_view"
+            app:layout_constraintStart_toStartOf="@id/activity_value_view"
+            app:layout_constraintTop_toBottomOf="@id/activity_value_view" />
+
+        <com.maximintegrated.maximsensorsapp.view.MultiChannelChartView
+            android:id="@+id/chartView"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginVertical="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hr_unit_view" />
+
+        <View
+            android:id="@+id/connection_info_divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/card_connection_info_divider_spacing"
+            android:background="?dividerVertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chartView" />
+
+        <com.maximintegrated.maximsensorsapp.view.BleConnectionView
+            android:id="@+id/ble_connection_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_connection_info_divider_spacing"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/connection_info_divider" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

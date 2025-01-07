@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/colorBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <com.maximintegrated.maximsensorsapp.view.MeasurementResultView
+            android:id="@+id/percentCompleted"
+            style="@style/DefaultCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:mrv_title="Percentage Completed"
+            app:mrv_unit="%" />
+
+        <TableLayout
+            android:id="@+id/timeDomainMetricsTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:layout_constraintTop_toBottomOf="@id/percentCompleted">
+
+            <TableRow
+                android:background="#00B2A9"
+                android:gravity="center_horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time_domain_metrics" />
+
+            </TableRow>
+
+            <TableRow
+                android:background="#9EC3DE"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/avnn" />
+
+                <TextView
+                    android:id="@+id/avnnView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/time_metrics_unit" />
+
+            </TableRow>
+
+            <TableRow
+                android:background="#9EC3DE"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/sdnn" />
+
+                <TextView
+                    android:id="@+id/sdnnView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/time_metrics_unit" />
+
+            </TableRow>
+
+            <TableRow
+                android:background="#9EC3DE"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/rmssd" />
+
+                <TextView
+                    android:id="@+id/rmssdView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/time_metrics_unit" />
+
+            </TableRow>
+
+            <TableRow
+                android:background="#9EC3DE"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/pnn50" />
+
+                <TextView
+                    android:id="@+id/pnn50View"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/empty_value" />
+
+            </TableRow>
+        </TableLayout>
+
+
+        <TableLayout
+            android:id="@+id/frequencyDomainMetricsTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:layout_constraintTop_toBottomOf="@id/timeDomainMetricsTable">
+
+            <TableRow
+                android:background="#00B2A9"
+                android:gravity="center_horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/frequency_domain_metrics" />
+
+            </TableRow>
+
+            <TableRow
+                android:background="#9EC3DE"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/ulf" />
+
+                <TextView
+                    android:id="@+id/ulfView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/freq_metrics_unit" />
+
+            </TableRow>
+
+            <TableRow
+                android:background="#9EC3DE"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/vlf" />
+
+                <TextView
+                    android:id="@+id/vlfView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/freq_metrics_unit" />
+
+            </TableRow>
+
+            <TableRow
+                android:background="#9EC3DE"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/lf" />
+
+                <TextView
+                    android:id="@+id/lfView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/freq_metrics_unit" />
+
+            </TableRow>
+
+            <TableRow
+                android:background="#9EC3DE"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/hf" />
+
+                <TextView
+                    android:id="@+id/hfView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/freq_metrics_unit" />
+
+            </TableRow>
+
+            <TableRow
+                android:background="#9EC3DE"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/lfOverHf" />
+
+                <TextView
+                    android:id="@+id/lfOverHfView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/empty_value" />
+
+            </TableRow>
+
+            <TableRow
+                android:background="#9EC3DE"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/totPwr" />
+
+                <TextView
+                    android:id="@+id/totPwrView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/freq_metrics_unit" />
+
+            </TableRow>
+        </TableLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/timeCardView"
+            style="@style/DefaultCardView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/signal_chart_height"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frequencyDomainMetricsTable">
+
+            <com.maximintegrated.maximsensorsapp.view.MultiChannelChartView
+                android:id="@+id/time_chart_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:mcv_show_settings="true"
+                app:mcv_single_selection="true" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/frequencyCardView"
+            style="@style/DefaultCardView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/signal_chart_height"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/timeCardView">
+
+            <com.maximintegrated.maximsensorsapp.view.MultiChannelChartView
+                android:id="@+id/frequency_chart_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:mcv_show_settings="true"
+                app:mcv_single_selection="true" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ibiCardView"
+            style="@style/DefaultCardView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/signal_chart_height"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frequencyCardView">
+
+            <com.maximintegrated.maximsensorsapp.view.MultiChannelChartView
+                android:id="@+id/ibi_chart_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ibiCardView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

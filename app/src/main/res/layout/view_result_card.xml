@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iconImageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            app:layout_constraintEnd_toStartOf="@id/titleView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/titleView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textAppearance="@style/TextAppearance.Maxim.ResultCard.Title"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iconImageView"
+            app:layout_constraintTop_toTopOf="@id/iconImageView"
+            tools:text="TITLE" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/iconImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/titleView"
+            app:layout_constraintTop_toBottomOf="@id/titleView">
+
+            <TextView
+                android:id="@+id/valueView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.Maxim.ResultCard.Value"
+                tools:text="AAAA" />
+
+            <TextView
+                android:id="@+id/flashingTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.Maxim.ResultCard.Value"
+                android:visibility="gone"
+                app:autoSizeTextType="uniform" />
+
+            <TextView
+                android:id="@+id/emptyTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.Maxim.ResultCard.Value"
+                android:visibility="gone"
+                app:autoSizeTextType="uniform" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/scdTextView"
+            android:text="SCD State:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/iconImageView"
+            app:layout_constraintTop_toBottomOf="@id/iconImageView"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/titleView"
+            app:layout_constraintTop_toTopOf="@id/scdTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/scdStateTextView"
+            android:text="No Decision"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/confidenceTextView"
+            android:text="@string/confidence"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/iconImageView"
+            app:layout_constraintTop_toTopOf="@id/confidenceProgressBar"
+            app:layout_constraintBottom_toBottomOf="@id/confidenceProgressBar"/>
+
+        <ProgressBar
+            android:layout_width="0dp"
+            android:layout_height="15dp"
+            app:layout_constraintStart_toEndOf="@id/confidenceTextView"
+            app:layout_constraintTop_toBottomOf="@id/scdTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/confidenceProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progress="0" />
+
+        <androidx.constraintlayout.widget.Group
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="confidenceProgressBar,confidenceTextView"
+            android:id="@+id/confidenceGroup"
+            android:visibility="gone"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="scdStateTextView,scdTextView"
+            android:id="@+id/scdGroup"
+            android:visibility="gone"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

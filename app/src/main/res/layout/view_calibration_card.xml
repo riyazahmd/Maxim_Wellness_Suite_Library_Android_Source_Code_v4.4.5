@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/statusImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            style="@style/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/calibration"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/sbpEditText1"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:hint="@string/sbp"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:nextFocusForward="@id/dbpEditText1"
+            android:singleLine="true"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/dbpEditText1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTextView"
+            app:layout_constraintHorizontal_chainStyle="packed"/>
+
+        <EditText
+            android:id="@+id/dbpEditText1"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:hint="@string/dbp"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/sbpEditText1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTextView"
+            app:layout_constraintHorizontal_chainStyle="packed"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/newButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/new_calibration"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/repeatButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sbpEditText1"
+            app:layout_constraintHorizontal_chainStyle="packed"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/repeatButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/repeat"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/calibrationButton"
+            app:layout_constraintStart_toEndOf="@id/newButton"
+            app:layout_constraintTop_toBottomOf="@id/sbpEditText1"
+            app:layout_constraintHorizontal_chainStyle="packed"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/calibrationButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/repeatButton"
+            app:layout_constraintTop_toBottomOf="@id/sbpEditText1"
+            app:layout_constraintHorizontal_chainStyle="packed"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

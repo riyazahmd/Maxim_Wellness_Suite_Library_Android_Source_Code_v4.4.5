@@ -1,0 +1,538 @@
+<resources>
+    <string name="app_version">App Version: %1$s</string>
+    <string name="server_version">Server: %1$s</string>
+    <string name="hub_version">Hub Version: %1$s</string>
+
+    <string name="app_name">Maxim Wellness Suite</string>
+    <string name="maxim_hsp">Maxim Health Sensor Platform</string>
+    <string name="spo2">Pulse Oximetry</string>
+    <string name="bpt">Blood Pressure Trending</string>
+    <string name="whrm">Optical Heart Rate Measurement</string>
+    <string name="whrm_toolbar">Optical HRM</string>
+    <string name="hrv">Heart Rate Variability</string>
+    <string name="respiratory">Respiratory Rate</string>
+    <string name="sleep_quality">Sleep Quality</string>
+    <string name="stress">Stress</string>
+    <string name="sports_coaching">Sports Coaching</string>
+    <string name="sports_coaching_alpha">Sports Coaching\n(alpha)</string>
+    <string name="ppg_signal">PPG Signal</string>
+    <string name="ppg_signal_scale_seconds">4 seconds</string>
+
+    <string name="channel_ir">IR</string>
+    <string name="channel_red">Red</string>
+    <string name="channel_green">Green</string>
+    <string name="channel_green1">Green-1</string>
+    <string name="channel_green2">Green-2</string>
+
+    <string name="monitoring_start">Start Monitoring</string>
+    <string name="monitoring_stop">Stop Monitoring</string>
+    <string name="log_to_file">Log to File</string>
+    <string name="log_to_flash">Log to Flash</string>
+    <string name="log_user_info">Log User Info</string>
+    <string name="log_file_saved_to">Log file saved to %1$s</string>
+
+    <string name="settings">Settings</string>
+    <string name="spo2_settings">SpO2 Settings</string>
+    <string name="whrm_settings">WHRM Settings</string>
+
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+
+    <string name="measurement_result_ready_to_start_message">Ready to Start</string>
+    <string name="measurement_result_measuring_message">Measuring…</string>
+    <string name="measurement_result_timeout_message">TIMEOUT</string>
+    <string name="measurement_result_warning_message">Keep still with the watch facing up</string>
+    <string name="measurement_result_failure_message">Check wrist band tightness &amp; placement and keep your arm still</string>
+
+    <string name="spo2_algorithm_mode_one_shot">One Shot</string>
+    <string name="spo2_algorithm_mode_continuous">Continuous</string>
+    <string name="spo2_algorithm_mode">Algorithm Mode</string>
+    <string name="snr">Low SNR</string>
+    <string name="signalQuality">Signal Quality</string>
+    <string name="motion">Motion</string>
+    <string name="pi">Low PI</string>
+    <string name="reliable_r">Reliable R</string>
+    <string name="respiration_rate">Respiration Rate</string>
+
+    <string name="time_domain_metrics">Time Domain Metrics</string>
+    <string name="frequency_domain_metrics">Frequency Domain Metrics</string>
+
+    <string name="avnn">avnn</string>
+    <string name="sdnn">sdnn</string>
+    <string name="rmssd">rmssd</string>
+    <string name="pnn50">pnn50</string>
+
+    <string name="ulf">ulf</string>
+    <string name="vlf">vlf</string>
+    <string name="lf">lf</string>
+    <string name="hf">hf</string>
+    <string name="lfOverHf">lf/hf</string>
+    <string name="totPwr">totPwr</string>
+
+    <string name="ibi">IBI</string>
+    <string name="ibiRr">Inter Beat Interval(ms)</string>
+    <string name="write_your_command">Write your command</string>
+    <string name="send_command">Send Command</string>
+    <string name="send_arbitrary_command">Send Arbitrary Command</string>
+    <string name="send">Send</string>
+    <string name="enable_scd">Enable Scd</string>
+
+    <string name="reference_device_title">HRM Reference Device</string>
+    <string name="polar_contact_detected">Contact Detected?</string>
+    <string name="polar_contact_detected_yes">YES</string>
+    <string name="polar_contact_detected_no">NO</string>
+    <string name="polar_heart_rate">Heart Rate</string>
+    <string name="polar_heart_rate_unit">BPM</string>
+    <string name="polar_empty_value">--</string>
+    <string name="polar_devices">Polar HRM Chest Straps</string>
+    <string name="write_sampled_mode_cycle_time">Write Sample Mode Cycle Time</string>
+    <string name="sample_mode_cycle_time">Sample Mode Cycle Time</string>
+    <string name="write_low_power_cycle_time">Write Low Power Cycle Time</string>
+
+    <string name="empty_value">--</string>
+    <string name="ble_connection_connect">Connect</string>
+    <string name="ble_connection_connecting_message">Connecting</string>
+    <string name="ble_connection_search_device">Search Device</string>
+
+    <string name="ble_connection_change_device">Change Device</string>
+    <string name="ble_connection_disconnect">Disconnect</string>
+    <string name="ble_connection_unknown_device_name">N/A</string>
+    <string name="ble_connection_battery_level_unknown">Unknown</string>
+    <string name="ble_connection_battery_level">%1$d%%</string>
+    <string name="ble_connection_battery_level_charging">Charging, %1$d%%</string>
+    <string name="ble_connection_lost_title">Bluetooth connection is lost!</string>
+    <string name="ble_connection_device_disconnected_message">Device has been disconnected.</string>
+    <string name="ble_connection_ref_device_disconnected_message">Reference device has been disconnected.</string>
+    <string name="ble_connection_right_button_text">Reconnect</string>
+    <string name="ble_connection_left_button_text">Search</string>
+    <string name="ble_connection_middle_button_text">Cancel</string>
+    <string name="ble_connection_back_button_text">Cancel</string>
+    <string name="whrm_algorithm_mode">WHRM Algorithm Mode</string>
+    <string name="whrm_algorithm_mode_continuous">Continuous Mode</string>
+    <string name="whrm_algorithm_mode_sampled">Sampled Mode</string>
+    <string name="whrm_algorithm_mode_low_power">Low Power Mode</string>
+    <string name="freq_metrics_unit">-- ms²</string>
+    <string name="time_metrics_unit">-- ms</string>
+    <string name="rr_unit">breath/min</string>
+    <string name="single_selection">Single Selection</string>
+    <string name="info">Info</string>
+    <string name="whrm_info">  Maxim Wearable Heart Rate Monitoring (WHRM) algorithm utilizes
+        synchronized 3-axis accelerometer and PPG data to provide several end-user friendly
+        fitness tracking outputs like heart rate and activity related statistics e.g. step count,
+        burned calories and activity class of the user. The PPG (photoplethysmography) signal can be
+        gathered from contractions of ventricles in finger, wrist, ear, toe, chest etc. </string>
+    <string name="spo2_info">  Pulse oximeter is a lightweight, small and noninvasive optical devices
+        to monitor the amount of oxygen carried in the blood. Pulse oximeter devices measure oxygen
+        saturation by illuminating the skin with red and near-infrared (IR) lights and measure
+        changes in light absorption of oxygenated (oxy-hemoglobin, HbO2) and deoxygenated blood
+        (deoxy-hemoglobin, RHb) using two light wavelengths. </string>
+    <string name="hrv_info">  HRV tends to be low when we\'re in a fight-or-flight mode and high when
+        we\'re more relaxed. High HRV is generally associated with greater cardiovascular fitness.
+        The electrocardiogram test is the gold standard for assessing HRV. However, wearable devices
+        with sophisticated algorithms are now making this data more accessible to more people. Since
+        HRV provides insights into our ANS, which regulates our heart rate (HR) and blood pressure,
+        it can be considered as the most important general wellness parameter.HRV gives us some
+        clues about potential cardiac conditions. Over time, higher HRV can indicate increased
+        resilience, while lower HRV can point to chronic stress. HRV can be increased by changes in
+        behavior: quitting smoking, losing weight if needed, exercising, and managing stress
+        and etc. </string>
+    <string name="resp_info">  Using PPG, we can measure respiration induced features. One of these
+        features is Respiratory Sinus Arrhythmia (RSA) which causes heart rate change during
+        respiratory events. Another feature we can measure is that the effect on the venous volume
+        of intrathoracic pressure changes during respiratory cycle. After processing these features,
+        our solution can report very accurate respiration rate estimates. </string>
+    <string name="stress_info">  Stress releases a hormone called adrenaline that quickens breath
+        increases HR and Blood Pressure, known as \"fight or flight response\". Deep breathing
+        exercise therefore can be suggested to shift body and mind into more relaxed state.\n
+        In literature, most of the wearable stress monitoring studies use galvanic skin response,
+        muscle tension, blood pressure and skin temperature devices as well as HR monitoring devices.
+        Maxim\'s stress estimation methods use accelerometer and PPG data (HR, HRV) solely.</string>
+    <string name="readiness_info">  Readiness score determines how much you are ready for the day.
+        \n\n  It is scaled between 1–100.\n\n  Taken early first thing in the morning.\n\n  Sit comfortably
+        and relax a few minutes before starting.</string>
+    <string name="vo2max_info">  VO2Max is a single best indicator of fitness and cardiovascular health.
+        \n\n  VO2Max score ranges between 1-100.\n\n  This function needs 3-6 minutes of data collected
+        from the user while they are sitting in a relax state. Relax state is where user is fully recovered
+        from last training and not effected by any kind of food, drug or alcohol.</string>
+    <string name="epoc_recovery_info">  EPOC is an abbreviation for Excess Post–Exercise Oxygen Consumption.
+        To estimate their EPOC value, user needs to start the algorithm after training and collect data for 5–6
+        minutes in resting state.</string>
+    <string name="recovery_time_info">  Recovery time is the amount of the time until user reaches to their homeostasis.
+        Algorithm needs to gather 2–3 minutes of data from user to estimate their recovery time.</string>
+    <string name="fitness_age_info">  The fitness age calculation is based on how fit you are, rather
+        than your actual age.\n\n  It uses VO2Max values measured and stored in history.</string>
+
+    <string name="alignment_successful">Auto alignment is done successfully.</string>
+    <string name="alignment_fail">ECG vs PPG auto alignment cannot be completed. The alignment should be done manually. Please refer to alignment section in the MAXREFDES103 user guide.</string>
+    <string name="confidence">Confidence</string>
+    <string name="add_annotation">Add Annotation</string>
+    <string name="enter_message">Enter your message</string>
+    <string name="monitoring_measurement">Monitoring the measurement...</string>
+    <string name="login">Login</string>
+    <string name="dont_have_account">Don\'t have account?</string>
+    <string name="id">ID</string>
+    <string name="username">Username</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="birth_year">Birth Year</string>
+    <string name="weight_in_kg">Weight (kg)</string>
+    <string name="height_in_cm">Height (cm)</string>
+    <string name="weight_in_lbs">Weight (lbs)</string>
+    <string name="height_in_inch">Height (inch)</string>
+    <string name="hemoglobin_in_g_dL">Hemoglobin (g/dL)</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="metric">Metric</string>
+    <string name="us">U.S.</string>
+    <string name="i_have_an_account">I have an account</string>
+    <string name="select_user">Select a user</string>
+    <string name="signup">Sign up</string>
+    <string name="all_fields_required">All the fields are required.</string>
+    <string name="training">Training</string>
+    <string name="history">History</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="readiness">Readiness</string>
+    <string name="resting_vo2max">Resting VO2Max</string>
+    <string name="vo2max">VO2Max</string>
+    <string name="undefined">Undefined</string>
+    <string name="vo2">VO2</string>
+    <string name="epoc_recovery">EPOC Recovery</string>
+    <string name="recovery_time">Recovery Time</string>
+    <string name="fitness_age">Fitness Age</string>
+    <string name="statistics">Statistics</string>
+    <string name="readiness_score">Readiness Score</string>
+    <string name="vo2max_score">VO2Max Score</string>
+    <string name="epoc_recovery_score">EPOC Recovery Score</string>
+    <string name="should_create_profile">You should create a profile.</string>
+    <string name="should_select_user">You should select a user.</string>
+    <string name="export_csv">Export CSV</string>
+    <string name="file_already_exists">File already exists</string>
+    <string name="no_data_found">No data found</string>
+    <string name="fitness_age_is_younger_than_actual_age">Your fitness age is younger than your actual age.</string>
+    <string name="fitness_age_is_older_than_actual_age">Your fitness age is older than your actual age.</string>
+    <string name="score">Score</string>
+    <string name="history_data_not_available">History data are not available.</string>
+    <string name="lt_30_sec"><![CDATA[<30 sec]]></string>
+    <string name="lt_1_min"><![CDATA[<1 min]]></string>
+    <string name="lt_2_min"><![CDATA[<2 min]]></string>
+    <string name="gt_2_min"><![CDATA[>2 min]]></string>
+    <string name="time_since_end_of_exercise">Time Since End of Exercise</string>
+    <string name="heavy">Heavy</string>
+    <string name="normal">Normal</string>
+    <string name="light">Light</string>
+    <string name="exercise_intensity">Exercise Intensity</string>
+    <string name="gt_60_min">60+</string>
+    <string name="_20_60_min">20 – 60</string>
+    <string name="_5_20_min">5 – 20</string>
+    <string name="_0_5_min">0 – 5</string>
+    <string name="exercise_duration_min">Exercise Duration (min)</string>
+
+    <string-array name="chart_titles">
+        <item>Select the chart</item>
+        <item>HR</item>
+        <item>SpO2</item>
+        <item>IBI</item>
+        <item>Steps</item>
+        <item>Motion</item>
+        <item>Resp. Rate</item>
+        <item>RMSSD</item>
+        <item>SDNN</item>
+        <item>AVNN</item>
+        <item>PNN50</item>
+        <item>ULF</item>
+        <item>VLF</item>
+        <item>LF</item>
+        <item>HF</item>
+        <item>LF/HF</item>
+        <item>Total Power</item>
+        <item>Stress</item>
+    </string-array>
+
+    <string name="multiple_connection_warning">Connecting to multiple BLE devices may result in data packet loss. Please ensure that a proper mobile device is used for evaluation.</string>
+    <string name="signal_quality_warning">Adjust your watch for better signal if the signal quality is displayed as red.\n\n
+        • Make sure that the strap is not loose, so that there is no gap between the sensor and the skin.\n\n
+        • Do not wear the watch too tight, which prevents blood flow.\n\n
+        • Do not wear the watch right on top of your wrist joint. If so, move it a few centimeters in elbow direction, so your wrist is free.</string>
+    <string name="motion_warning">You should stay still if the motion is displayed as red.</string>
+    <string name="orientation_warning">If the orientation flag is displayed as red, the orientation of the watch should be fixed.</string>
+
+    <!-- TEMP -->
+    <string name="temp">Temperature</string>
+    <string name="temp_title">Temperature</string>
+    <string name="temp_unit_celsius">°C</string>
+    <string name="temp_unit_fahrenheit">°F</string>
+    <string name="temp_legend">Temperature</string>
+    <string name="temp_sample_interval">Sample Interval</string>
+    <string name="temp_sample_interval_unit">seconds</string>
+
+    <!-- ECG -->
+    <string name="ecg">Electrocardiogram</string>
+    <string name="ecg_data">ECG Amplitude (mV)</string>
+    <string name="ecg_sampling_rate_message">Sampling rate has been set to <b>128sps</b></string>
+    <string name="ecg_rtor_unit">BPM</string>
+    <string name="ecg_averaged_rtor">Averaged R-to-R</string>
+    <string name="ecg_current_rtor">Current R-to-R</string>
+    <string name="ecg_monitor_with_default_settings_title">Default Settings</string>
+    <string name="ecg_monitor_with_default_settings_content">Would you like to apply the default settings?</string>
+    <string name="ecg_monitor_with_default_settings_yes">Yes</string>
+    <string name="ecg_monitor_with_default_settings_no">No</string>
+    <string name="ecg_filters">Filters</string>
+    <string name="ecg_filter_notch_50">Notch50</string>
+    <string name="ecg_filter_notch_60">Notch60</string>
+    <string name="ecg_filter_low_pass_40">LowPass40</string>
+    <string name="ecg_invert">Invert ECG</string>
+
+    <!-- Flash Log Parser -->
+    <string name="parse">Parse</string>
+    <string name="importFile">Import File</string>
+    <string name="maxim_log_file">Maxim Log File</string>
+    <string name="saved_to">Saved to</string>
+    <string name="file_format_no_match">The file format does not match!</string>
+    <string name="file_saved_successfully">File is parsed and saved successfully!</string>
+    <string name="not_maxim_log_file">The file is not a Maxim log file!</string>
+    <string name="error_occured">Error occurred!</string>
+    <string name="archive">Archive</string>
+    <string name="flash_log_parser">Flash Log Parser</string>
+    <string name="wrong_format">Wrong Format</string>
+    <string name="wrong_format_index">Wrong Format Index</string>
+
+
+    <string name="hr_confidence_level">HR Confidence Level (0–100)</string>
+    <string name="hr_expiration_threshold">HR Expiration Threshold (sec)</string>
+    <string name="maxim_legal_info">The collected data is used to improve the accuracy of Maxim algorithms that run on this device. It is not shared with any 3rd parties.</string>
+
+    <!-- HR Alignment -->
+    <string name="maxim_raw_data">Maxim Raw Data File</string>
+    <string name="reference_hr_file">Reference HR File</string>
+    <string name="align">Align</string>
+    <string name="hr_alignment">HR Alignment</string>
+    <string name="reference_hr_file_example">Reference HR File Example</string>
+    <string name="ref_file_info_message">The file should be in the csv format. The first column in the file needs to contain unix timestamp(milliseconds) information. The second column should display the HR (bpm) values. Below, you can see an example:</string>
+
+    <string name="packet_lost_message">Data packets lost. Please restart the measurement.</string>
+    <string name="epoc_requirement">There should be at least 1 EPOC measurement in history.</string>
+    <string name="vo2max_requirement">There should be at least 1 VO2Max measurement in history.</string>
+
+    <!-- BP Trending -->
+    <string name="bp_history">BP History</string>
+    <string name="or">OR</string>
+    <string name="create_a_new_user">Create a new user</string>
+    <string name="bp_trending">BP Trending</string>
+    <string name="username_already_exists">This username already exists.</string>
+    <string name="critical_information">Critical Information</string>
+    <string name="calibration_warning">Calibration is very important and valid for 4 weeks. Any error
+        in this protocol will cause incorrect reports, thereafter. Please use an FDA approved BP device for
+        reference measurements.</string>
+    <string name="calibration">Calibration</string>
+    <string name="resting_5_minutes">Resting 5 minutes!</string>
+    <string name="resting_warning">Please rest at least 5 minutes before taking reference measurements.</string>
+    <string name="restart_timer">Restart Timer</string>
+    <string name="sbp">Systolic</string>
+    <string name="dbp">Diastolic</string>
+    <string name="sbp_mmhg">Systolic BP\n(mmHg)</string>
+    <string name="dbp_mmhg">Diastolic BP\n(mmHg)</string>
+    <string name="calibration_completed">Calibration is completed!</string>
+    <string name="second_calibration">Second Calibration</string>
+    <string name="first_calibration">First Calibration</string>
+    <string name="third_calibration">Third Calibration</string>
+    <string name="calculated">Calculated</string>
+    <string name="collect_data">Collect data</string>
+    <string name="pulse">Pulse (bpm)</string>
+    <string name="hr_title">HR (bpm)</string>
+    <string name="spo2_title">SpO2 (%)</string>
+    <string name="signal">Signal:</string>
+    <string name="stop">Stop</string>
+    <string name="start">Start</string>
+    <string name="bpt_ref_measuring">Wait for BPT Reference</string>
+    <string name="hr_format">HR (BPM): %1$s</string>
+    <string name="spo2_format">SpO2 (%%): %1$s</string>
+    <string name="hr_spo2_format">&lt;b>Pulse: &lt;/b> %1$d bpm  &lt;b>SpO2:&lt;/b> %2$d%%</string>
+    <string name="percent_format">%1$s %%</string>
+    <string name="measurement">Measurement</string>
+    <string name="sbp_dbp_format">%1$d / %2$d</string>
+    <string name="wait">Wait</string>
+    <string name="done">Done</string>
+    <string name="ref_bp_zero_warning">Reference measurements cannot be 0.</string>
+    <string name="ref_bp_required_fields_warning">You should enter a reference measurement.</string>
+    <string name="calibration_required_warning">You should calibrate first!</string>
+    <string name="username_empty_error">Username cannot be empty.</string>
+    <string name="user_not_selected_error">User is not selected.</string>
+    <string name="expired_calibration_warning">Your latest calibration is \n%1$s (Expired)\n\nYou have to calibrate again.</string>
+    <string name="no_calibration_warning">You don\'t have a calibration data. You should have at least 1 valid calibration before measurement.</string>
+    <string name="less_calibration_warning">You have %1$d calibration data. It is recommended to have at least %2$d. Would you like to continue to measure?</string>
+    <string name="valid_calibration_warning_not_max">You have %1$d valid calibration data:\n\n%2$s\n Would you like to add another calibration?</string>
+    <string name="valid_calibration_warning_max">Your latest %1$d valid calibration data is listed below:\n\n%2$s\nWould you like to add another?</string>
+
+    <string-array name="bpt_algorithm_out_status">
+        <item>No Signal</item>
+        <item>Progress</item>
+        <item>Success</item>
+        <item>Bad Signal</item>
+        <item>Motion</item>
+        <item>Failure</item>
+        <item>Calibration Segment Done</item>
+        <item>SUBJECT FAILURE</item>
+        <item>Init Success</item>
+        <item>Trending Error</item>
+        <item>Inconsistency Error 1</item>
+        <item>Inconsistency Error 2</item>
+        <item>Inconsistency Error 3</item>
+        <item>Reference Count Mismatch Error</item>
+        <item>Reference Out Of Limit Error</item>
+        <item>Reference Max Number Error</item>
+        <item>Pulse Pressure Out Of Range</item>
+        <item>HR Out Of Range Error</item>
+        <item>HR Above Resting</item>
+        <item>PI Out Of Range Error</item>
+        <item>Estimation Error</item>
+        <item>BP Out Of Range Error</item>
+        <item>BP Out Pf Limit Error</item>
+        <item>No Contact Error</item>
+        <item>No Finger Error</item>
+        <item>Reserved</item>
+        <item>Reserved</item>
+        <item>Reserved</item>
+        <item>Reserved</item>
+        <item>Reserved</item>
+        <item>Reserved</item>
+        <item>Reserved</item>
+    </string-array>
+
+    <string name="repeat">Repeat</string>
+    <string name="available_in">Available in</string>
+    <string name="confirm">Confirm</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="stop_calibration">Stop Calibration</string>
+    <string name="stop_measurement">Stop Measurement</string>
+    <string name="restart">Restart</string>
+    <string name="skip_now">Skip Now</string>
+    <string name="subject_failure_error">Subject Failure</string>
+    <string name="subject_failure_error_message">Error occurred during initialization.</string>
+    <string name="trending_error">Trending Error</string>
+    <string name="trending_error_message">There exists a trend in the reference measurements.</string>
+    <string name="inconsistency_error">Inconsistency Error</string>
+    <string name="inconsistency_error_1">The first reference measurement is discarded.</string>
+    <string name="inconsistency_error_2">The second reference measurement is discarded.</string>
+    <string name="inconsistency_error_3">The third reference measurement is discarded.</string>
+    <string name="ref_count_mismatch_error">Reference Count Mismatch</string>
+    <string name="ref_count_mismatch_error_message">The number of calibration references are not matching.</string>
+    <string name="ref_out_of_limit_error">Reference Out Of Limit</string>
+    <string name="ref_out_of_limit_error_message">Calibration reference values are out of BP limits.</string>
+    <string name="ref_max_num_error">Max Number of Reference Error</string>
+    <string name="ref_max_num_error_message">The number of calibration is more than the limit.</string>
+    <string name="pp_out_of_range_error">Pulse Pressure Out Of Range</string>
+    <string name="pp_out_of_range_error_message">Pulse pressure difference should be above 20 mmHg.</string>
+    <string name="hr_out_of_range_error">Fast Heart Rate</string>
+    <string name="hr_out_of_range_error_message">HR is now out of range for the resting level.
+        Please rest 5 minutes and retry again</string>
+    <string name="hr_above_resting_warning">Fast Heart Rate</string>
+    <string name="hr_above_resting_warning_message">HR is now higher than the average resting level.
+        Please rest 5 minutes and retry again for better accuracy.</string>
+    <string name="pi_out_of_range_error">PI Out of Range</string>
+    <string name="pi_out_of_range_error_message">Perfusion index is out of range.\n
+        If your finger is cold or circulation is reduced, please warm or rub your finger.\n
+        There might be residue in the light path. Please make sure that light path is clean.</string>
+    <string name="estimation_error">Estimation Error</string>
+    <string name="estimation_error_message">Please rest and try again.</string>
+    <string name="bp_out_of_range_error">BP Out Of Range</string>
+    <string name="bp_out_of_range_error_message">Please rest and try again. BP is outside the defined
+        range with respect to calibration:\n
+        • Sys +/- 30 mmHg\n
+        • Dia +/- 20 mmHg </string>
+    <string name="bp_out_of_limit_error">BP Out Of Limit</string>
+    <string name="bp_out_of_limit_error_message">BP is outside the defined limits:\n
+        • Sys 80-180 mmHg\n
+        • Dia 50-120 mmHg </string>
+    <string name="no_finger_error">No Finger Error</string>
+    <string name="no_finger_error_message">Please place the finger on the sensor right after the start.</string>
+
+    <string name="no_contact_error">No Contact Error</string>
+    <string name="no_contact_error_message">Please place the finger on the sensor right after the start.</string>
+
+    <string name="enable_mfio">Enable MFIO</string>
+    <string name="enable_scdsm">Enable Scd SM</string>
+
+    <!-- Sleep Quality Assessment -->
+    <string name="details">Details</string>
+    <string name="no_data_available">No data available.</string>
+    <string name="wake">Wake</string>
+    <string name="rem">REM</string>
+    <string name="deep">Deep</string>
+    <string name="total_sleep_time">Total Sleep Time</string>
+    <string name="bed_time">Bed Time</string>
+    <string name="wake_time">Wake Time</string>
+    <string name="algorithm_finished_successfully">Algorithm finished successfully</string>
+    <string name="algorithm_not_found_sleep_state">Algorithm did not found a sleep state in the given data</string>
+    <string name="sleep_algorithm_result">Sleep Algorithm Result</string>
+    <string name="new_calibration">New</string>
+    <string name="please_wait">Please wait...</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+
+    <string name="gender_age_info">%1$s, %2$d years old</string>
+    <string name="are_you_sure_to_delete_it">Are you sure you want to delete it?</string>
+    <string name="no_user_saved">There are no saved users.</string>
+    <string name="select">Select</string>
+    <string name="initial_hr_bpm">Initial HR (bpm)</string>
+    <string name="sleep_resting_hr_bpm">Sleep Resting HR (bpm)</string>
+    <string name="user_profile">User Profile</string>
+    <string name="you_should_select_user_first">You should select the user first!</string>
+    <string name="low_power_mode">Low Power Mode</string>
+    <string name="rr_ref_heart_rate">Heart Rate</string>
+    <string name="rr_ref_heart_rate_unit">BPM</string>
+    <string name="rr_ref_respiration_rate">Resp. Rate</string>
+    <string name="rr_ref_respiration_rate_unit">BPM</string>
+    <string name="rr_ref_respiration_rate_confidence">RR Conf</string>
+    <string name="rr_ref_respiration_rate_confidence_unit">%</string>
+    <string name="rr_ref_activity">Activity</string>
+    <string name="rr_ref_activity_unit">g</string>
+    <string name="rr_ref_empty_value">--</string>
+    <string name="rr_ref_device">RR Reference Device</string>
+    <string name="rr_breath_waveform">Breath Waveform</string>
+
+    <string name="spo2_ref_spo2">SpO2</string>
+    <string name="spo2_ref_spo2_unit">%</string>
+    <string name="spo2_ref_pulse_rate">Pulse Rate</string>
+    <string name="spo2_ref_pulse_rate_unit">BPM</string>
+    <string name="spo2_ref_pulse_amplitude_index">PAI</string>
+    <string name="spo2_ref_pulse_amplitude_index_unit">%</string>
+    <string name="spo2_ref_empty_value">--</string>
+    <string name="spo2_ref_device">SpO2 Reference Device</string>
+    <string name="orientation">Orientation</string>
+
+    <string name="blood_gas_measurement_title">Blood Gas Measurement</string>
+    <string name="blood_gas_measurement_hint">SaO2 (%)</string>
+
+    <string name="id_required">ID is required.</string>
+    <string name="username_required">Username is required.</string>
+    <string name="name_required">Name is required.</string>
+    <string name="surname_required">Surname is required.</string>
+    <string name="birth_year_required">Birth Year is required.</string>
+    <string name="birth_year_out_of_range">Birth Year should be in between 1900 - %1$d</string>
+    <string name="weight_required">Weight is required as integer.</string>
+    <string name="height_required">Height is required as integer.</string>
+    <string name="hemoglobin_required">Hemoglobin is required as integer.</string>
+    <string name="initial_hr_required">Initial HR is required as integer.</string>
+    <string name="initial_hr_out_of_range">Initial HR should be in between %1$d - %2$d</string>
+    <string name="sleep_resting_hr_required">Sleep Resting HR is required as integer.</string>
+    <string name="sleep_resting_hr_out_of_range">Sleep Resting HR should be in between %1$d - %2$d</string>
+
+    <string name="bpt_ref_systolic">SYS</string>
+    <string name="bpt_ref_systolic_unit">mmHg</string>
+    <string name="bpt_ref_diastolic">DIA</string>
+    <string name="bpt_ref_diastolic_unit">mmHg</string>
+    <string name="bpt_ref_pulse">PULSE</string>
+    <string name="bpt_ref_pulse_unit">BPM</string>
+    <string name="bpt_ref_spo2">SPO2</string>
+    <string name="bpt_ref_spo2_unit">%</string>
+    <string name="bpt_ref_empty_value">--</string>
+
+    <string name="bpt_ref_device">BPT Reference Device</string>
+    <string name="bpt_ref_measurement_failure_message">Blood pressure measurement failed</string>
+    <string name="bpt_ref_measurement_failure_action">Retry</string>
+    <string name="stay_steady">Stay steady</string>
+    <string name="qardio">Qardio</string>
+</resources>

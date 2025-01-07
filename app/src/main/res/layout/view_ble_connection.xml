@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <eo.view.bluetoothstate.BluetoothStateView
+        android:id="@+id/bluetooth_state_view"
+        android:layout_width="@dimen/ble_connection_state_size"
+        android:layout_height="@dimen/ble_connection_state_size"
+        android:visibility="gone"
+        app:bluetoothAnimateStateChanges="false"
+        app:bluetoothColor="?android:textColorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bluetooth_device_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ble_connection_device_name_margin_start"
+        android:layout_marginEnd="@dimen/ble_connection_device_name_margin_end"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAlignment="viewStart"
+        android:textAppearance="?textAppearanceSubtitle1"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/bluetooth_device_address"
+        app:layout_constraintEnd_toStartOf="@id/battery_meter_and_connect_button_barrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Device Name" />
+
+    <TextView
+        android:id="@+id/bluetooth_device_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ble_connection_device_address_margin_top"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAlignment="viewStart"
+        android:textAppearance="?textAppearanceCaption"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/bluetooth_device_name"
+        app:layout_constraintStart_toStartOf="@id/bluetooth_device_name"
+        app:layout_constraintTop_toBottomOf="@id/bluetooth_device_name"
+        tools:text="01:23:45:67:89:AB" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/device_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        app:constraint_referenced_ids="bluetooth_device_address,bluetooth_state_view,bluetooth_device_name" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/battery_meter_and_connect_button_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="connect_button,battery_meter_view,connecting_message_view" />
+
+    <eo.view.batterymeter.BatteryMeterView
+        android:id="@+id/battery_meter_view"
+        android:layout_width="@dimen/ble_connection_battery_size"
+        android:layout_height="@dimen/ble_connection_battery_size"
+        android:background="?selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        app:batteryMeterColor="?colorAccent"
+        app:batteryMeterUnknownColor="?android:textColorTertiary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/battery_level_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/battery_meter_view"
+        app:layout_constraintEnd_toStartOf="@id/battery_meter_view"
+        app:layout_constraintTop_toTopOf="@id/battery_meter_view"
+        tools:text="100%" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/connect_button"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ble_connection_connect"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/connecting_message_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ble_connection_connecting_message"
+        android:textAllCaps="true"
+        android:textAppearance="?textAppearanceCaption"
+        android:textColor="?colorAccent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/search_button"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ble_connection_search_device"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</merge>

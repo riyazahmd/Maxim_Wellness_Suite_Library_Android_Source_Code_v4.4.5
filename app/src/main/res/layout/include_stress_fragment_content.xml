@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/colorBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <com.maximintegrated.maximsensorsapp.view.MeasurementResultView
+            android:id="@+id/percentCompleted"
+            style="@style/DefaultCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:mrv_title="Percentage Completed"
+            app:mrv_unit="%" />
+
+        <com.maximintegrated.maximsensorsapp.ResultCardView
+            android:id="@+id/stressView"
+            style="@style/DefaultCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/percentCompleted"
+            app:layout_constraintWidth_max="300dp"
+            app:miv_icon="@drawable/ic_stress_neutral"
+            app:rcv_title="Stress" />
+
+        <com.maximintegrated.maximsensorsapp.ResultCardView
+            android:id="@+id/hrView"
+            style="@style/DefaultCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/stressView"
+            app:layout_constraintWidth_max="300dp"
+            app:miv_icon="@drawable/ic_heart_rate"
+            app:rcv_title="HR (bpm)" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hrView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

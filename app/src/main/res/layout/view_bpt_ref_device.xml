@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/card_padding">
+
+        <ImageView
+            android:id="@+id/logo_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_monitor_heart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/title_view"
+            app:layout_constraintBottom_toBottomOf="@id/title_view"/>
+
+        <TextView
+            android:id="@+id/title_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/card_logo_title_spacing"
+            android:text="@string/bpt_ref_device"
+            android:textAppearance="?textAppearanceHeadline6"
+            android:textColor="?android:textColorSecondary"
+            app:layout_constraintStart_toEndOf="@id/logo_view"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <View
+            android:id="@+id/title_divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginVertical="@dimen/card_title_divider_spacing"
+            android:background="?dividerVertical"
+            app:layout_constraintTop_toBottomOf="@id/title_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="title_divider, systolic_title_view, diastolic_title_view, pulse_title_view, systolic_value_view ,diastolic_value_view ,pulse_value_view ,systolic_unit_view ,diastolic_unit_view ,pulse_unit_view"
+            android:id="@+id/bptResultGroup"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/systolic_title_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bpt_ref_systolic"
+            android:layout_marginVertical="@dimen/card_title_divider_spacing"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceSubtitle1"
+            app:layout_constraintTop_toBottomOf="@id/title_divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/diastolic_title_view"
+            app:layout_constraintBottom_toTopOf="@id/systolic_value_view"/>
+
+        <TextView
+            android:id="@+id/diastolic_title_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bpt_ref_diastolic"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceSubtitle1"
+            app:layout_constraintTop_toTopOf="@id/systolic_title_view"
+            app:layout_constraintStart_toEndOf="@id/systolic_title_view"
+            app:layout_constraintEnd_toStartOf="@id/pulse_title_view"
+            app:layout_constraintBottom_toBottomOf="@id/systolic_title_view"/>
+
+        <TextView
+            android:id="@+id/pulse_title_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bpt_ref_pulse"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceSubtitle1"
+            app:layout_constraintStart_toEndOf="@id/diastolic_title_view"
+            app:layout_constraintTop_toTopOf="@id/systolic_title_view"
+            app:layout_constraintBottom_toBottomOf="@id/systolic_title_view"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/systolic_value_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bpt_ref_empty_value"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceHeadline3"
+            app:layout_constraintTop_toBottomOf="@id/systolic_title_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/diastolic_value_view"
+            app:layout_constraintBottom_toTopOf="@id/systolic_unit_view"
+            tools:text="120" />
+
+        <TextView
+            android:id="@+id/diastolic_value_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bpt_ref_empty_value"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceHeadline3"
+            app:layout_constraintTop_toTopOf="@id/systolic_value_view"
+            app:layout_constraintStart_toEndOf="@id/systolic_value_view"
+            app:layout_constraintEnd_toStartOf="@id/pulse_value_view"
+            app:layout_constraintBottom_toBottomOf="@id/systolic_value_view"
+            tools:text="80" />
+
+        <TextView
+            android:id="@+id/pulse_value_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bpt_ref_empty_value"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceHeadline3"
+            app:layout_constraintTop_toTopOf="@id/systolic_value_view"
+            app:layout_constraintStart_toEndOf="@id/diastolic_value_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/systolic_value_view"
+            tools:text="70" />
+
+        <TextView
+            android:id="@+id/systolic_unit_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bpt_ref_systolic_unit"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceCaption"
+            app:layout_constraintTop_toBottomOf="@id/systolic_value_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/diastolic_unit_view"
+            app:layout_constraintBottom_toTopOf="@id/connection_info_divider"/>
+
+        <TextView
+            android:id="@+id/diastolic_unit_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bpt_ref_diastolic_unit"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceCaption"
+            app:layout_constraintTop_toTopOf="@id/systolic_unit_view"
+            app:layout_constraintStart_toEndOf="@id/systolic_unit_view"
+            app:layout_constraintEnd_toStartOf="@id/pulse_unit_view"
+            app:layout_constraintBottom_toBottomOf="@id/systolic_unit_view"/>
+
+        <TextView
+            android:id="@+id/pulse_unit_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bpt_ref_pulse_unit"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceCaption"
+            app:layout_constraintStart_toEndOf="@id/diastolic_unit_view"
+            app:layout_constraintTop_toTopOf="@id/systolic_unit_view"
+            app:layout_constraintBottom_toBottomOf="@id/systolic_unit_view"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="connection_info_divider, ble_connection_view"
+            android:id="@+id/bptConnectionGroup"
+            android:visibility="visible"/>
+
+        <View
+            android:id="@+id/connection_info_divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="?dividerVertical"
+            android:layout_marginTop="@dimen/card_connection_info_divider_spacing"
+            app:layout_constraintTop_toBottomOf="@id/systolic_unit_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.maximintegrated.maximsensorsapp.view.BleConnectionView
+            android:id="@+id/ble_connection_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_connection_info_divider_spacing"
+            app:layout_constraintTop_toBottomOf="@id/connection_info_divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

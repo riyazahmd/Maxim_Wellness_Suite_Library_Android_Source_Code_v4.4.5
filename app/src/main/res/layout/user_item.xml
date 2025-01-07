@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SectionCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/usernameTextView"
+            style="@style/CardViewTitleTextView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/userSelectedImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/userSelectedImageView"
+            tools:text="Username" />
+
+        <ImageView
+            android:id="@+id/userSelectedImageView"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_check"
+            android:tint="#FFF"/>
+
+        <ImageView
+            android:id="@+id/genderAgeImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_person"
+            android:tint="@color/color_primary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/usernameTextView" />
+
+        <TextView
+            android:id="@+id/genderAgeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@id/genderAgeImageView"
+            app:layout_constraintStart_toEndOf="@id/genderAgeImageView"
+            app:layout_constraintTop_toTopOf="@id/genderAgeImageView"
+            tools:text="MALE, 25 years old" />
+
+        <ImageView
+            android:id="@+id/initialHeartRateImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_heart_rate"
+            android:tint="@color/color_primary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/genderAgeImageView" />
+
+        <TextView
+            android:id="@+id/initialHeartRateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@id/initialHeartRateImageView"
+            app:layout_constraintStart_toEndOf="@id/initialHeartRateImageView"
+            app:layout_constraintTop_toTopOf="@id/initialHeartRateImageView"
+            tools:text="70 bpm" />
+
+        <ImageView
+            android:id="@+id/heightImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_height"
+            android:tint="@color/color_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/usernameTextView" />
+
+        <TextView
+            android:id="@+id/heightTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@id/heightImageView"
+            app:layout_constraintEnd_toStartOf="@id/heightImageView"
+            app:layout_constraintTop_toTopOf="@id/heightImageView"
+            tools:text="187 cm" />
+
+        <ImageView
+            android:id="@+id/weightImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_weight"
+            android:tint="@color/color_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/heightImageView" />
+
+        <TextView
+            android:id="@+id/weightTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@id/weightImageView"
+            app:layout_constraintEnd_toStartOf="@id/weightImageView"
+            app:layout_constraintTop_toTopOf="@id/weightImageView"
+            tools:text="100 kg" />
+
+        <ImageView
+            android:id="@+id/deleteImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/ic_delete"
+            android:alpha="0.7"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintBottom_toBottomOf="@id/editButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/editButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/selectButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:text="@string/select"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/weightImageView" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/editButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="@string/edit"
+            app:layout_constraintEnd_toStartOf="@id/selectButton"
+            app:layout_constraintTop_toTopOf="@id/selectButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

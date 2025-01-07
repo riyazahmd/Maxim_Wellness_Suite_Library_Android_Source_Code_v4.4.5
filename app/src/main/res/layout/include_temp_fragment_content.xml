@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.maximintegrated.maximsensorsapp.temp.TempChartView
+            style="@style/DefaultCardView"
+            android:id="@+id/tempChartView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/sampleIntervalLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/sampleIntervalLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/temp_sample_interval"
+            app:layout_constraintBottom_toTopOf="@id/tempValueView"
+            app:layout_constraintEnd_toStartOf="@id/sampleIntervalSpinner"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tempChartView" />
+
+        <Spinner
+            android:id="@+id/sampleIntervalSpinner"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/sampleIntervalLabel"
+            app:layout_constraintEnd_toStartOf="@id/sampleIntervalUnit"
+            app:layout_constraintStart_toEndOf="@id/sampleIntervalLabel"
+            app:layout_constraintTop_toTopOf="@id/sampleIntervalLabel" />
+
+        <TextView
+            android:id="@+id/sampleIntervalUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/temp_sample_interval_unit"
+            app:layout_constraintBottom_toBottomOf="@id/sampleIntervalLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/sampleIntervalSpinner"
+            app:layout_constraintTop_toTopOf="@id/sampleIntervalLabel" />
+
+        <com.maximintegrated.maximsensorsapp.temp.TempValueView
+            style="@style/DefaultCardView"
+            android:id="@+id/tempValueView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sampleIntervalLabel"
+            app:layout_constraintWidth_percent="0.7" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

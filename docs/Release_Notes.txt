@@ -1,0 +1,157 @@
+Maxim Wellness Suite 4.4.5 - 1/13/2022
+	Add animation to BPT measurement results
+	
+Maxim Wellness Suite 4.4.4 - 1/11/2022
+	Add Green Channel to BPT
+	Update BPT Result continuously
+
+Maxim Wellness Suite 4.4.3 - 10/25/2021
+	Device connection check feature has been added.
+
+Maxim Wellness Suite 4.4.0 - 09/24/2021
+	Android 11 support has been added.
+	MRD220 BPT issues have been fixed.
+	BPT mode has been added to MRD104.
+	BPT Reference device (Qardio) support has been added.
+	Automated reference value obtaining system for BPT has been added.
+
+Maxim Wellness Suite 4.3.0 - 08/20/2021
+	Flash log parser is improved.
+	Reference device issues have been solved.
+	User info logging feature is added to Pulse Oximetry mode.
+	Blood gas measurement logging is added to archive.
+	Default graph parameters have been changed in HRV mode.
+	Minor bugs have been fixed.	
+
+Maxim Wellness Suite 4.2.0 - 07/13/2021
+	Algorithm Library has been updated to v2.1.1
+	Sleep algorithm encoded output support has been added.
+	SleepRestingHR has been added to user information.
+	User dependency has been added to archive & sleep quality sections.
+
+Maxim Wellness Suite 4.1.0 - 07/12/2021
+	MRD104 Support has been added.
+	BLE Library has been updated to latest version
+	Algorithm Library has been updated to v2.0.2
+
+Maxim Wellness Suite 4.0.0 - 04/15/2021
+	Zephyr Support has been added.
+	Nonin Support has been added.
+	Wellness Library has been updated.
+	Respiration Rate has been updated.
+	User Interface has been improved.
+	Minor bugs have been fixed.
+	MRD105 Support has been added.
+
+Maxim Wellness Suite 3.3.0 - 2/24/2021
+	Change the stream data function signature.
+	Add Low power selection UI.
+	DataGenerator functionality is added for 1Hz option.
+    
+	KNOWN ISSUES:
+    	1) HRV and Stress algorithms are not working with 1Hz mode.
+    	2) Flash logs with 1 Hz data cannot be parsed. 
+
+Maxim Wellness Suite 3.2.1 - 11/16/2020
+	BPT NO_CONTACT and NO_FINGER status flags are added.
+
+Maxim Wellness Suite 3.2.0 - 10/23/2020
+	ECG Measurement is added for MAX32664B.
+	TEMP measurement is added for MAX32664B.
+	Flash Log Parser is improved.
+	Wellness Library is updated. 
+	BLE enable problem is fixed.
+	ME11A support has been added.
+	SpO2 UI is improved.
+	Notification icon bug is fixed.
+	Algorithm library run function returns the overall status instead of true/false.
+	BPT No Finger status is added.
+	IbiOffset is added to data stream.
+	Log file version is added to header section. 
+	Parsing raw data for different versions is supported.
+	User Profile is added, multiple user can be defined.
+	Device is updated according to the selected user for calculations.
+	Authentication function return type is changed. 
+
+Maxim Wellness Suite 3.1.0 - 09/12/2020
+	BPT Api has been changed.
+	Flash Log Parser is improved.
+	Wellness Library is updated. 
+
+Maxim Wellness Suite 3.0.0 - 06/25/2020
+	The SQA application is integrated into Wellness App. 
+	The SQI is calculated via library. 
+	The output file is created after post processing. 
+	The BP Trending application is integrated into Wellness App.
+	Back to back cuff measurement time interval is added.
+	Recalibration warning is added.
+	Calibration values are shown in the history log.
+	UI is improved.
+	Calibration expired warning is added.
+	Repeat option for the calibration page is added.
+	SpO2 progress bar bug is fixed.
+	SpO2 prelimary values are shown for one shot mode.
+	Obsolete values are not displayed.
+	Timeout message bug is fixed.
+	Zero Confidence level indication is added.
+
+Maxim Wellness Suite 2.0.2 - 04/07/2020
+	Flash Log parser is added to support offline mode.
+	The legend in respiration rate is fixed.
+	The effect of first HR reporting time improvement is shown.
+	HR Confidence Level Cropping is added.
+	HR Alignment page is added.
+	Library is updated.
+	UI is improved.
+	Sports Coaching is improved.
+	SpO2 measurement display is improved.
+
+Maxim Wellness Suite 2.0.1 - 02/27/2020
+	File reading is optimized.
+	Library is updated.
+	Sports Coaching bugs are fixed.
+
+Maxim Wellness Suite 2.0.0 - 02/19/2020
+	Sports Coaching Library is integrated.
+	UI is improved.
+	Layout problems are fixed.
+	Sports Coaching functionality is added.
+	CSV export is added for the algorithm outputs.
+	Device filter is added.
+
+Maxim Wellness Suite 1.3.4 - 01/28/2020
+	File reading is optimized.
+	Cadence is changed to total active power.
+	Ble power settings is added.
+	User warning is shown for the dropped ble packets.
+
+Maxim Wellness Suite 1.3.3 - 01/24/2020
+	Downsampling bug is fixed.
+
+Maxim Wellness Suite 1.3.2 - 01/23/2020
+	Error log file is created if there are any dropped ble packets.
+	Cadence resolution is changed.
+	Taking notes for the measurements are enabled.
+	Notification messages are updated according to the related measurements.
+	Scd state is shown for the respiration rate.
+
+Maxim Wellness Suite 1.3.1 - 01/20/2020
+	File parsing bug fixed.
+	Auto alignment feature is added to the preview screen.
+
+Maxim Wellness Suite 1.3.0 - 01/17/2020
+	WHRM timer cancellation is fixed.
+	Some texts are changed.
+	The mode in the stress measurement is changed from continuous to one-short.
+	Respiration rate resolution for the chart is fixed.
+	Scd enabling bug is fixed.
+	WHRM periodic timer is fixed.
+	Log to File is unchecked when Log to Flash is enabled.
+	Offline data preview screen is optimized.
+	Single selection option is added for the multi-channel charts.
+	Ble scanning problem is fixed.
+	Reference device log file is deleted when there is no entry.
+	Info dialogs are added.
+	Background problem is fixed.
+	Single library is updated.
+	HR Alignment is recorded to a file.

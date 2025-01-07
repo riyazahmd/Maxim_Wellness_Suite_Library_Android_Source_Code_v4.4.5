@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleView1"
+            android:gravity="center"
+            tool:text="Title 1"
+            android:textAppearance="@style/TextAppearance.Maxim.ResultCard.Title"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/titleView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleView2"
+            android:gravity="center"
+            tool:text="Title 2"
+            android:textAppearance="@style/TextAppearance.Maxim.ResultCard.Title"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/titleView1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/valueView1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tool:text="--"
+            android:textAppearance="@style/TextAppearance.Maxim.ResultCard.Value"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/titleView1"
+            app:layout_constraintStart_toStartOf="@id/titleView1"
+            app:layout_constraintTop_toBottomOf="@id/titleView1"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/valueView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tool:text="--"
+            android:textAppearance="@style/TextAppearance.Maxim.ResultCard.Value"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/titleView2"
+            app:layout_constraintStart_toStartOf="@id/titleView2"
+            app:layout_constraintTop_toBottomOf="@id/titleView2"
+            android:layout_marginTop="5dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</merge>

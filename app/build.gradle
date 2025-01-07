@@ -1,0 +1,145 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'org.jetbrains.kotlin.android.extensions'
+apply plugin: 'kotlin-kapt'
+
+def getStore = { ->
+    def result = project.hasProperty('storeFile') ? storeFile : "null"
+    return result
+}
+
+def getStorePassword = { ->
+    def result = project.hasProperty('storePassword') ? storePassword : ""
+    return result
+}
+
+def getKeyAlias = { ->
+    def result = project.hasProperty('keyAlias') ? keyAlias : ""
+    return result
+}
+
+def getKeyPassword = { ->
+    def result = project.hasProperty('keyPassword') ? keyPassword : ""
+    return result
+}
+
+android {
+    compileSdkVersion config.compileSdk
+    buildToolsVersion config.buildToolsVersion
+    dataBinding {
+        enabled true
+    }
+    defaultConfig {
+        applicationId "com.maximintegrated.maximsensorsapp"
+        minSdkVersion config.minSdk
+        targetSdkVersion config.targetSdk
+        versionCode config.versionCode
+        versionName config.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(getStore())
+            storePassword getStorePassword()
+            keyAlias getKeyAlias()
+            keyPassword getKeyPassword()
+
+            // Optional, specify signing versions used
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':style')
+    implementation project(':bluetooth')
+    implementation project(':hsp')
+    implementation project(':polar')
+    implementation project(':algorithms')
+    implementation project(':ecgfilter')
+    implementation project(':zephyr')
+    implementation project(':nonin')
+
+    implementation deps.kotlinStdLib
+    implementation deps.appcompat
+    implementation deps.material
+    implementation deps.constraintLayout
+    implementation deps.recyclerView
+
+    implementation deps.lifecycleExtensions
+    implementation deps.lifecycleCommon
+    implementation deps.liveData
+    implementation deps.viewModel
+
+    implementation deps.ktx
+    implementation deps.timber
+    implementation deps.kotpref
+    implementation deps.kotprefInitializer
+    implementation "org.jetbrains.anko:anko-commons:0.10.8"
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.github.hedzr:android-file-chooser:v1.2.0-final'
+    implementation 'de.siegmar:fastcsv:1.0.3'
+
+//    implementation deps.bleLibrary
+    implementation deps.bleCommon
+    implementation deps.bleLiveData
+
+    implementation deps.bluetoothStateView
+    implementation deps.batteryMeterView
+
+    implementation deps.lottie
+    implementation deps.mpAndroidChart
+    implementation deps.circleProgress
+
+    implementation 'com.github.RohitSurwase.UCE-Handler:uce_handler:1.4'
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation project(path: ':qardio')
+    testImplementation deps.junit
+    androidTestImplementation deps.atsl
+    androidTestImplementation deps.espresso
+
+    implementation deps.roomRuntime
+    implementation deps.roomKtx
+    kapt deps.roomCompiler
+    kapt deps.roomPersistence
+
+    implementation deps.appIntro
+
+    if(JavaVersion.current().ordinal() >= JavaVersion.VERSION_1_9.ordinal()){
+        kapt 'javax.xml.bind:jaxb-api:2.3.1'
+        kapt 'com.sun.xml.bind:jaxb-core:2.3.0.1'
+        kapt 'com.sun.xml.bind:jaxb-impl:2.3.2'
+        compileOnly 'com.github.pengrad:jdk9-deps:1.0'
+
+        annotationProcessor 'javax.xml.bind:jaxb-api:2.3.1'
+        annotationProcessor 'com.sun.xml.bind:jaxb-core:2.3.0.1'
+        annotationProcessor 'com.sun.xml.bind:jaxb-impl:2.3.2'
+    }
+}

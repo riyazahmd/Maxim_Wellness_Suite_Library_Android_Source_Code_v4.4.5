@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="20dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/calibrationChartCardView"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            android:layout_marginTop="10dp"
+            android:id="@+id/progressCardView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/signal"
+                    style="@style/TitleTextView"
+                    android:id="@+id/signalTitleTextView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/empty_value"
+                    android:textSize="16sp"
+                    android:id="@+id/signalTextView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/signalTitleTextView"
+                    android:layout_marginStart="10dp"/>
+                <ProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/signalTitleTextView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_margin="10dp"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/bpt_progress_bar_bg"
+                    android:id="@+id/progressBar"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintStart_toStartOf="@id/progressBar"
+                    app:layout_constraintEnd_toEndOf="@id/progressBar"
+                    app:layout_constraintTop_toTopOf="@id/progressBar"
+                    app:layout_constraintBottom_toBottomOf="@id/progressBar"
+                    android:text="0 %"
+                    android:textAlignment="center"
+                    android:id="@+id/progressTextView"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.maximintegrated.maximsensorsapp.view.QardioView
+            android:id="@+id/qardioViewCalibrationFragment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"/>
+
+        <com.maximintegrated.maximsensorsapp.bpt.CalibrationView
+            android:id="@+id/calibrationCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/qardioViewCalibrationFragment"
+            app:cv_title="@string/calibration"
+            android:tag="0"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/calibrationChartCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/calibrationCardView">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/calibrationChartLayout">
+                <com.maximintegrated.maximsensorsapp.view.MultiChannelChartView
+                    android:id="@+id/chartView"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pulse"
+                    style="@style/TitleTextView"
+                    android:id="@+id/hrTitleTextView"
+                    app:layout_constraintTop_toBottomOf="@id/chartView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/spo2TitleTextView"
+                    android:layout_marginTop="5dp"
+                    android:textAlignment="center"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/spo2_title"
+                    style="@style/TitleTextView"
+                    android:id="@+id/spo2TitleTextView"
+                    app:layout_constraintTop_toBottomOf="@id/chartView"
+                    app:layout_constraintStart_toEndOf="@id/hrTitleTextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textAlignment="center"
+                    android:layout_marginTop="5dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/empty_value"
+                    android:textSize="16sp"
+                    android:id="@+id/hrTextView"
+                    app:layout_constraintTop_toBottomOf="@id/hrTitleTextView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/spo2TextView"
+                    android:layout_marginTop="3dp"
+                    android:textAlignment="center"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/empty_value"
+                    android:textSize="16sp"
+                    android:id="@+id/spo2TextView"
+                    app:layout_constraintTop_toBottomOf="@id/spo2TitleTextView"
+                    app:layout_constraintStart_toEndOf="@id/hrTextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textAlignment="center"
+                    android:layout_marginTop="3dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:padding="5dp"
+                android:id="@+id/warningLayout"
+                android:visibility="invisible">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/TitleTextView"
+                    tools:text="Warning"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:id="@+id/bpWarningTitleTextView"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/bp_out_of_range_error_message"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bpWarningTitleTextView"
+                    app:layout_constraintBottom_toTopOf="@id/bpWarningSkipButton"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="10dp"
+                    android:id="@+id/bpWarningMessageTextView"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/bpWarningStopButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toStartOf="@id/bpWarningSkipButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bpWarningMessageTextView"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:text="@string/stop_calibration"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/bpWarningSkipButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/bpWarningStopButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/bpWarningStopButton"
+                    app:layout_constraintBottom_toBottomOf="@id/bpWarningStopButton"
+                    android:text="@string/skip_now"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/calibrationChartCardView"
+            android:layout_marginTop="10dp"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progressCardView"
+            android:layout_marginTop="10dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</merge>

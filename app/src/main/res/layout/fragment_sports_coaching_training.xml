@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_app_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="?android:attr/colorBackground"
+        android:clickable="true"
+        android:fillViewport="true"
+        android:focusable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <com.maximintegrated.maximsensorsapp.MenuItemView
+                android:id="@+id/readinessMenuItemView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="32dp"
+                app:cardElevation="@dimen/menu_item_card_elevation"
+                app:miv_icon="@drawable/ic_readiness"
+                app:miv_title="@string/readiness" />
+
+            <com.maximintegrated.maximsensorsapp.MenuItemView
+                android:id="@+id/vo2MaxMenuItemView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="@dimen/menu_item_margin_top"
+                android:layout_marginEnd="32dp"
+                app:cardElevation="@dimen/menu_item_card_elevation"
+                app:miv_icon="@drawable/ic_vo2max"
+                app:miv_title="@string/resting_vo2max" />
+
+            <com.maximintegrated.maximsensorsapp.MenuItemView
+                android:id="@+id/epocRecoveryMenuItemView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="@dimen/menu_item_margin_top"
+                android:layout_marginEnd="32dp"
+                app:cardElevation="@dimen/menu_item_card_elevation"
+                app:miv_icon="@drawable/ic_epoc_recovery"
+                app:miv_title="@string/epoc_recovery" />
+
+            <com.maximintegrated.maximsensorsapp.MenuItemView
+                android:id="@+id/recoveryTimeMenuItemView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="@dimen/menu_item_margin_top"
+                android:layout_marginEnd="32dp"
+                app:cardElevation="@dimen/menu_item_card_elevation"
+                app:miv_icon="@drawable/ic_recovery_time"
+                app:miv_title="@string/recovery_time" />
+
+            <com.maximintegrated.maximsensorsapp.MenuItemView
+                android:id="@+id/fitnessAgeMenuItemView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="@dimen/menu_item_margin_top"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="5dp"
+                app:cardElevation="@dimen/menu_item_card_elevation"
+                app:miv_icon="@drawable/ic_fitness_age"
+                app:miv_title="@string/fitness_age" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

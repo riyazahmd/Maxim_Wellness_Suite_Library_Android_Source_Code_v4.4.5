@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/card_padding">
+
+        <ImageView
+            android:id="@+id/logo_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/title_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/title_view"
+            app:srcCompat="@drawable/ic_spo2" />
+
+        <TextView
+            android:id="@+id/title_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/card_logo_title_spacing"
+            android:text="@string/spo2_ref_device"
+            android:textAppearance="?textAppearanceHeadline6"
+            android:textColor="?android:textColorSecondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/logo_view"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/title_divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/card_title_divider_spacing"
+            android:background="?dividerVertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_view" />
+
+        <TextView
+            android:id="@+id/spo2_title_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_title_content_spacing"
+            android:text="@string/spo2_ref_spo2"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceSubtitle1"
+            app:layout_constraintEnd_toStartOf="@id/pr_title_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_view" />
+
+        <TextView
+            android:id="@+id/pr_title_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/spo2_ref_pulse_rate"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceSubtitle1"
+            app:layout_constraintEnd_toStartOf="@id/pulse_amp_index_title_view"
+            app:layout_constraintStart_toEndOf="@id/spo2_title_view"
+            app:layout_constraintTop_toTopOf="@id/spo2_title_view" />
+
+        <TextView
+            android:id="@+id/pulse_amp_index_title_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/spo2_ref_pulse_amplitude_index"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceSubtitle1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/pr_title_view"
+            app:layout_constraintTop_toTopOf="@id/pr_title_view" />
+
+        <TextView
+            android:id="@+id/spo2_value_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/empty_value"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.Maxim.Headline4.Custom"
+            app:layout_constraintEnd_toEndOf="@id/spo2_title_view"
+            app:layout_constraintStart_toStartOf="@id/spo2_title_view"
+            app:layout_constraintTop_toBottomOf="@id/spo2_title_view"
+            tools:text="80" />
+
+        <TextView
+            android:id="@+id/pr_value_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/empty_value"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.Maxim.Headline4.Custom"
+            app:layout_constraintEnd_toEndOf="@id/pr_title_view"
+            app:layout_constraintStart_toStartOf="@id/pr_title_view"
+            app:layout_constraintTop_toBottomOf="@id/pr_title_view"
+            tools:text="16.1" />
+
+        <TextView
+            android:id="@+id/pulse_amp_index_value_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/empty_value"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.Maxim.Headline4.Custom"
+            app:layout_constraintEnd_toEndOf="@id/pulse_amp_index_title_view"
+            app:layout_constraintStart_toStartOf="@id/pulse_amp_index_title_view"
+            app:layout_constraintTop_toBottomOf="@id/pulse_amp_index_title_view"
+            tools:text="100" />
+
+        <TextView
+            android:id="@+id/spo2_unit_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/spo2_ref_spo2_unit"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceCaption"
+            app:layout_constraintEnd_toEndOf="@id/spo2_value_view"
+            app:layout_constraintStart_toStartOf="@id/spo2_value_view"
+            app:layout_constraintTop_toBottomOf="@id/spo2_value_view" />
+
+        <TextView
+            android:id="@+id/pr_unit_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/spo2_ref_pulse_rate_unit"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceCaption"
+            app:layout_constraintEnd_toEndOf="@id/pr_value_view"
+            app:layout_constraintStart_toStartOf="@id/pr_value_view"
+            app:layout_constraintTop_toBottomOf="@id/pr_value_view" />
+
+        <TextView
+            android:id="@+id/pulse_amp_index_unit_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/spo2_ref_pulse_amplitude_index_unit"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceCaption"
+            app:layout_constraintEnd_toEndOf="@id/pulse_amp_index_value_view"
+            app:layout_constraintStart_toStartOf="@id/pulse_amp_index_value_view"
+            app:layout_constraintTop_toBottomOf="@id/pulse_amp_index_value_view" />
+
+        <View
+            android:id="@+id/connection_info_divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/card_connection_info_divider_spacing"
+            android:background="?dividerVertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spo2_unit_view" />
+
+        <com.maximintegrated.maximsensorsapp.view.BleConnectionView
+            android:id="@+id/ble_connection_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_connection_info_divider_spacing"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/connection_info_divider" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

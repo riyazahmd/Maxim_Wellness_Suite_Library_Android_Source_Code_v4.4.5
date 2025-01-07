@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:id="@+id/titleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Maxim.MeasuringTitleView"
+            android:textColor="?colorControlNormal"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="title"/>
+
+        <TextView
+            android:id="@+id/readyToStartMessageView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="@string/measurement_result_ready_to_start_message"
+            android:textAppearance="@style/TextAppearance.Maxim.MeasuringReadyToStartMessageView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleView" />
+
+        <at.grabner.circleprogress.CircleProgressView
+            android:id="@+id/measuringCircleView"
+            android:layout_width="@dimen/measuring_circle_width"
+            android:layout_height="@dimen/measuring_circle_height"
+            android:layout_marginTop="@dimen/measuring_circle_margin_top"
+            android:layout_marginBottom="@dimen/measuring_circle_margin_bottom"
+            android:visibility="gone"
+            app:cpv_autoTextSize="true"
+            app:cpv_barStrokeCap="Round"
+            app:cpv_barWidth="16dp"
+            app:cpv_innerContourSize="0dp"
+            app:cpv_maxValue="100"
+            app:cpv_outerContourSize="0dp"
+            app:cpv_rimWidth="16dp"
+            app:cpv_seekMode="false"
+            app:cpv_showTextInSpinningMode="false"
+            app:cpv_spin="true"
+            app:cpv_spinBarLength="60"
+            app:cpv_spinSpeed="6"
+            app:cpv_textMode="Text"
+            app:layout_constraintBottom_toTopOf="@id/measuringWarningMessageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleView" />
+
+        <TextView
+            android:id="@+id/measuringMessageView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/measurement_result_measuring_message"
+            android:textAppearance="@style/TextAppearance.Maxim.MeasuringMessage"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/measuringCircleView"
+            app:layout_constraintEnd_toEndOf="@id/measuringCircleView"
+            app:layout_constraintStart_toStartOf="@id/measuringCircleView"
+            app:layout_constraintTop_toTopOf="@id/measuringCircleView" />
+
+        <TextView
+            android:id="@+id/measuringWarningMessageView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/measurement_result_warning_message"
+            android:textAppearance="@style/TextAppearance.Maxim.MeasuringWarningMessageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/measuringCircleView" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/measuringGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="measuringCircleView,measuringMessageView,measuringWarningMessageView" />
+
+        <TextView
+            android:id="@+id/resultView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Maxim.MeasuringResultView"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/measuringWarningMessageView"
+            tools:text="100%" />
+
+        <TextView
+            android:id="@+id/timeoutMessageView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="@string/measurement_result_timeout_message"
+            android:textAppearance="@style/TextAppearance.Maxim.MeasuringTimeoutMessageView"
+            android:textColor="@color/error_text"
+            app:layout_constraintBottom_toTopOf="@id/failureMessageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleView" />
+
+        <TextView
+            android:id="@+id/failureMessageView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/measurement_result_failure_message"
+            android:textAppearance="@style/TextAppearance.Maxim.MeasuringWarningMessageView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/timeoutMessageView" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/timeoutGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="timeoutMessageView,failureMessageView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</merge>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_app_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="?android:attr/colorBackground"
+        android:clickable="true"
+        android:fillViewport="true"
+        android:focusable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <com.maximintegrated.maximsensorsapp.MenuItemView
+                android:id="@+id/trainingMenuItemView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                app:cardElevation="@dimen/menu_item_card_elevation"
+                app:miv_icon="@drawable/ic_sports_coaching"
+                app:miv_title="@string/training" />
+
+            <com.maximintegrated.maximsensorsapp.MenuItemView
+                android:id="@+id/historyMenuItemView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="32dp"
+                app:cardElevation="@dimen/menu_item_card_elevation"
+                app:miv_icon="@drawable/ic_history"
+                app:miv_title="@string/history" />
+
+            <com.maximintegrated.maximsensorsapp.MenuItemView
+                android:id="@+id/profileMenuItemView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="32dp"
+                app:cardElevation="@dimen/menu_item_card_elevation"
+                app:miv_icon="@drawable/ic_person"
+                app:miv_title="@string/profile" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="32dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="32dp" />
+
+        <com.maximintegrated.maximsensorsapp.MenuItemView
+            android:id="@+id/profileMenuItemView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/menu_item_margin_top"
+            app:cardElevation="@dimen/menu_item_card_elevation"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_max="@dimen/menu_item_view_max_width"
+            app:miv_icon="@drawable/ic_person"
+            app:miv_title="@string/user_profile" />
+
+        <com.maximintegrated.maximsensorsapp.MenuItemView
+            android:id="@+id/bptMenuItemView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/menu_item_margin_top"
+            app:cardElevation="@dimen/menu_item_card_elevation"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/profileMenuItemView"
+            app:layout_constraintWidth_max="@dimen/menu_item_view_max_width"
+            app:miv_icon="@drawable/ic_monitor_heart"
+            app:miv_title="@string/bpt" />
+
+        <com.maximintegrated.maximsensorsapp.MenuItemView
+            android:id="@+id/whrmMenuItemView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/menu_item_margin_top"
+            app:cardElevation="@dimen/menu_item_card_elevation"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/bptMenuItemView"
+            app:layout_constraintWidth_max="@dimen/menu_item_view_max_width"
+            app:miv_icon="@drawable/ic_heart_rate"
+            app:miv_title="@string/whrm" />
+
+        <com.maximintegrated.maximsensorsapp.MenuItemView
+            android:id="@+id/spo2MenuItemView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/menu_item_margin_top"
+            app:cardElevation="@dimen/menu_item_card_elevation"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/whrmMenuItemView"
+            app:layout_constraintWidth_max="@dimen/menu_item_view_max_width"
+            app:miv_icon="@drawable/ic_spo2"
+            app:miv_title="@string/spo2" />
+
+        <com.maximintegrated.maximsensorsapp.MenuItemView
+            android:id="@+id/hrvMenuItemView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/menu_item_margin_top"
+            app:cardElevation="@dimen/menu_item_card_elevation"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/spo2MenuItemView"
+            app:layout_constraintWidth_max="@dimen/menu_item_view_max_width"
+            app:miv_icon="@drawable/ic_hrv_signal"
+            app:miv_title="@string/hrv" />
+
+        <com.maximintegrated.maximsensorsapp.MenuItemView
+            android:id="@+id/respiratoryMenuItemView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/menu_item_margin_top"
+            app:cardElevation="@dimen/menu_item_card_elevation"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/hrvMenuItemView"
+            app:layout_constraintWidth_max="@dimen/menu_item_view_max_width"
+            app:miv_icon="@drawable/ic_respiration"
+            app:miv_title="@string/respiratory" />
+
+        <com.maximintegrated.maximsensorsapp.MenuItemView
+            android:id="@+id/sleepMenuItemView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/menu_item_margin_top"
+            app:cardElevation="@dimen/menu_item_card_elevation"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/respiratoryMenuItemView"
+            app:layout_constraintWidth_max="@dimen/menu_item_view_max_width"
+            app:miv_icon="@drawable/ic_sleep"
+            app:miv_title="@string/sleep_quality" />
+
+        <com.maximintegrated.maximsensorsapp.MenuItemView
+            android:id="@+id/stressMenuItemView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/menu_item_margin_top"
+            app:cardElevation="@dimen/menu_item_card_elevation"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/sleepMenuItemView"
+            app:layout_constraintWidth_max="@dimen/menu_item_view_max_width"
+            app:miv_icon="@drawable/ic_stress"
+            app:miv_title="@string/stress" />
+
+        <com.maximintegrated.maximsensorsapp.MenuItemView
+            android:id="@+id/sportsCoachingMenuItemView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/menu_item_margin_top"
+            app:cardElevation="@dimen/menu_item_card_elevation"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/stressMenuItemView"
+            app:layout_constraintWidth_max="@dimen/menu_item_view_max_width"
+            app:miv_icon="@drawable/ic_sports_coaching"
+            app:miv_title="@string/sports_coaching_alpha" />
+
+        <com.maximintegrated.maximsensorsapp.MenuItemView
+            android:id="@+id/ecgMenuItemView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/menu_item_margin_top"
+            app:cardElevation="@dimen/menu_item_card_elevation"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/sportsCoachingMenuItemView"
+            app:layout_constraintWidth_max="@dimen/menu_item_view_max_width"
+            app:miv_icon="@drawable/ic_ecg"
+            app:miv_title="@string/ecg" />
+
+        <com.maximintegrated.maximsensorsapp.MenuItemView
+            android:id="@+id/tempMenuItemView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/menu_item_margin_top"
+            app:cardElevation="@dimen/menu_item_card_elevation"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/ecgMenuItemView"
+            app:layout_constraintWidth_max="@dimen/menu_item_view_max_width"
+            app:miv_icon="@drawable/ic_temperature"
+            app:miv_title="@string/temp" />
+
+        <com.maximintegrated.maximsensorsapp.MenuItemView
+            android:id="@+id/archiveMenuItemView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/menu_item_margin_top"
+            app:cardElevation="@dimen/menu_item_card_elevation"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/tempMenuItemView"
+            app:layout_constraintWidth_max="@dimen/menu_item_view_max_width"
+            app:miv_icon="@drawable/ic_archive"
+            app:miv_title="@string/archive" />
+        <com.maximintegrated.maximsensorsapp.MenuItemView
+            android:id="@+id/parserMenuItemView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/menu_item_margin_top"
+            app:cardElevation="@dimen/menu_item_card_elevation"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/archiveMenuItemView"
+            app:layout_constraintWidth_max="@dimen/menu_item_view_max_width"
+            app:miv_icon="@drawable/ic_import"
+            app:miv_title="@string/flash_log_parser" />
+        <com.maximintegrated.maximsensorsapp.MenuItemView
+            android:id="@+id/alignmentMenuItemView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/menu_item_margin_top"
+            app:cardElevation="@dimen/menu_item_card_elevation"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/parserMenuItemView"
+            app:layout_constraintWidth_max="@dimen/menu_item_view_max_width"
+            app:miv_icon="@drawable/ic_alignment"
+            app:miv_title="@string/hr_alignment" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/alignmentMenuItemView"
+            android:layout_marginTop="24dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</merge>
